@@ -1,0 +1,138 @@
+{
+    "UCD": {
+        "title": "Data element error indication",
+        "description": "To identify an erroneous stand-alone, composite or component data element, and to identify the nature of the error."
+    },
+    "UCF": {
+        "title": "Group response",
+        "description": "To identify a group in the subject interchange and to indicate acknowledgement or rejection (action taken) of the UNG and UNE segments, and to identify any error related to these segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the group level. Depending on the action code, it may also indicate the action taken on the messages and packages within that group."
+    },
+    "UCI": {
+        "title": "Interchange response",
+        "description": "To identify the subject interchange, to indicate interchange receipt, to indicate acknowledgement or rejection (action taken) of the UNA, UNB and UNZ segments, and to identify any error related to these segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the interchange level. Depending on the action code, it may also indicate the action taken on the groups, messages, and packages within that interchange."
+    },
+    "UCM": {
+        "title": "Message/package response",
+        "description": "To identify a message or package in the subject interchange, and to indicate that message's or package's acknowledgement or rejection (action taken), and to identify any error related to the UNH, UNT, UNO, and UNP segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the message or package level."
+    },
+    "UCS": {
+        "title": "Segment error indication",
+        "description": "To identify either a segment containing an error or a missing segment, and to identify any error related to the complete segment."
+    },
+    "UGH": {
+        "title": "Anti-collision segment group header",
+        "description": "To head, identify and specify an anti-collision segment group."
+    },
+    "UGT": {
+        "title": "Anti-collision segment group trailer",
+        "description": "To end and check the completeness of an anti-collision segment group."
+    },
+    "UIB": {
+        "title": "Interactive interchange header",
+        "description": "To head and identify an interchange."
+    },
+    "UIH": {
+        "title": "Interactive message header",
+        "description": "To head, identify and specify a message."
+    },
+    "UIR": {
+        "title": "Interactive status",
+        "description": "To report the status of the dialogue."
+    },
+    "UIT": {
+        "title": "Interactive message trailer",
+        "description": "To end and check the completeness of a message."
+    },
+    "UIZ": {
+        "title": "Interactive interchange trailer",
+        "description": "To end and check the completeness of an interchange."
+    },
+    "UNB": {
+        "title": "Interchange header",
+        "description": "To identify an interchange."
+    },
+    "UNE": {
+        "title": "Group trailer",
+        "description": "To end and check the completeness of a group."
+    },
+    "UNG": {
+        "title": "Group header",
+        "description": "To head, identify and specify a group of messages and/or packages, which may be used for internal routing and which may contain one or more message types and/or packages."
+    },
+    "UNH": {
+        "title": "Message header",
+        "description": "To head, identify and specify a message."
+    },
+    "UNO": {
+        "title": "Object header",
+        "description": "To head, identify and specify an object."
+    },
+    "UNP": {
+        "title": "Object trailer",
+        "description": "To end and check the completeness of an object."
+    },
+    "UNS": {
+        "title": "Section control",
+        "description": "To separate header, detail and summary sections of a message."
+    },
+    "UNT": {
+        "title": "Message trailer",
+        "description": "To end and check the completeness of a message."
+    },
+    "UNZ": {
+        "title": "Interchange trailer",
+        "description": "To end and check the completeness of an interchange."
+    },
+    "USA": {
+        "title": "Security algorithm",
+        "description": "To identify a security algorithm, the technical usage made of it, and to contain the technical parameters required."
+    },
+    "USB": {
+        "title": "Secured data identification",
+        "description": "To contain details related to the AUTACK."
+    },
+    "USC": {
+        "title": "Certificate",
+        "description": "To convey the public key and the credentials of its owner."
+    },
+    "USD": {
+        "title": "Data encryption header",
+        "description": "To specify size (i.e. length of data in octets of bits) of encrypted data following the segment terminator of this segment."
+    },
+    "USE": {
+        "title": "Security message relation",
+        "description": "To specify the relation to earlier security messages, such as response to a particular request, or request for a particular answer."
+    },
+    "USF": {
+        "title": "Key management function",
+        "description": "To specify the type of key management function and the status of a corresponding key or certificate."
+    },
+    "USH": {
+        "title": "Security header",
+        "description": "To specify a security mechanism applied to a EDIFACT structure (i.e.: either message/package, group or interchange)."
+    },
+    "USL": {
+        "title": "Security list status",
+        "description": "To specify the status of security objects, such as keys or certificates to be delivered in a list, and the corresponding list parameters."
+    },
+    "USR": {
+        "title": "Security result",
+        "description": "To contain the result of the security mechanisms."
+    },
+    "UST": {
+        "title": "Security trailer",
+        "description": "To establish a link between security header and security trailer segment groups."
+    },
+    "USU": {
+        "title": "Data encryption trailer",
+        "description": "To provide a trailer for the encrypted data."
+    },
+    "USX": {
+        "title": "Security references",
+        "description": "To refer to the secured EDIFACT structure and its associated date and time."
+    },
+    "USY": {
+        "title": "Security on references",
+        "description": "To identify the applicable header, and to contain the security result and/or to indicate the possible cause of security rejection for the referred value."
+    }
+}

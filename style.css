@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Roboto Mono";
+    src: url('./assets/RobotoMono.ttf');
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url('./assets/RobotoMono-Bold.ttf');
+    font-weight: bold;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+table {
+    font-family: "Roboto Mono", monospace;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    min-height: calc(100vh - 32px);
+    max-height: calc(100vh - 32px);
+    overflow: hidden;
+}
+
+.tabs li.is-active {
+    border-left: 1px solid #E7EBED;
+    border-right: 1px solid #E7EBED;
+    background-color: #F7F7FC;
+}
+
+.border {
+    border-left: 1px solid #E7EBED;
+    border-right: 1px solid #E7EBED;
+}
+
+.column {
+    border-top: 1px solid #E7EBED;
+}
+
+.column-header {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    border-bottom: 1px solid #E7EBED;
+}
+
+.column-tabs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+.waiting {
+    display: flex;
+    width: 100%;
+    padding: 128px 64px;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 24px;
+    margin-left: 16px;
+}
+
+div#stdout {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.8em;
+    color: #2B2B2B;
+    min-height: calc(100vh - 138px);
+    max-height: calc(100vh - 138px);
+    min-width: calc(75vw - 200px);
+    max-width: calc(75vw - 200px);
+    white-space: pre-wrap; 
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding: 16px;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #DBDBDB;
+    border-radius: 20px;
+    border: 3px solid #F5F5F5;
+}

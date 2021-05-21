@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EDI Warehouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script defer src="./menu.js"></script>
+</head>
+
+<style>
+    body {
+        padding: 2em;
+    }
+
+    .option {
+        display: flex;
+        align-items: flex-end;
+        transition: border 0.25s linear, box-shadow 0.3s ease-in-out;;
+        padding: 1em;
+        border-radius: 4px;
+        border: 1px solid #DBDBDB;
+        height: 100px;
+    }
+    
+    .option:hover {
+        border: 1px solid rgb(86, 180, 239);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!--<img src="logo.png" style="height: 32px; margin-bottom: 16px">-->
+    <div class="columns is-8" style="min-height: 100vh">
+        <div id="edifactBtn" class="column">
+            <div class="option">UN/EDIFACT</div>
+        </div>
+        <div class="column">
+            <div class="option">ANSI X12</div>
+        </div>
+        <div class="column">
+            <div class="option">TRADACOMS</div>
+        </div>
+        <div class="column">
+            
+        </div>
+    </div>
+</body>
+
+</html>
