@@ -1,4 +1,7 @@
 class DTM < Line
+    attr_reader :date
+    attr_reader :qualifier
+
     def initialize(data, version, chars)
         super(data, version, chars)
         # (2005) Date/time/period qualifier

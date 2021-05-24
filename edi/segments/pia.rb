@@ -13,6 +13,13 @@ class PIA < Line
         @agency             = val(2, 3, "3055")
     end
 
+    def html
+        coded = [[1, 0], [2, 1]]
+        typed = [[2, 0]]
+        mssge = [[2, 2], [2, 3]]
+        super(coded, typed, mssge)
+    end
+
     def table
         rows = [header_row]
         # (4347) Product id. function qualifier

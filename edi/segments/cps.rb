@@ -9,6 +9,13 @@ class CPS < Line
         @packaging_level     = val(3, 0, "7075")
     end
 
+    def html
+        coded = [[3, 0]]
+        typed = []
+        mssge = [[1, 0], [2, 0]]
+        super(coded, typed, mssge)
+    end
+
     def table
         rows = [header_row]
         # (7164) Hierarchical id. number

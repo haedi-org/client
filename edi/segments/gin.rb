@@ -7,6 +7,12 @@ class GIN < Line
         @identity_range     = [val(2, 0), val(2, 1)].compact
     end
 
+    def html
+        coded = [[1, 0]]
+        typed = [[2, 0], [2, 1]]
+        super(coded, typed)
+    end
+
     def table
         rows = [header_row]
         # (7405) Identity number qualifier

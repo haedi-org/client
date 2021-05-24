@@ -12,7 +12,8 @@ class NAD < Line
         # (3124) Name and address line (5 lines)
         @address        = val(3)
         # (3036) Party name (5 lines)
-        @party_name     = val(4)[0, 5]
+        @party_name     = val(4)
+        @party_name     = @party_name[0, 5] unless @party_name == nil
         # (3045) Party name format, coded
         @party_format   = val(4, 5, "3045")
         # (3042) Street and number/p.o. box (4 lines)

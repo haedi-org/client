@@ -21,6 +21,13 @@ class IMD < Line
         @language                 = val(3, 5, "3453")
     end
 
+    def html
+        coded = [[1, 0], [2, 0], [3, 5]]
+        typed = [[3, 0], [3, 3], [3, 4]]
+        mssge = [[2, 1], [2, 2], [3, 1], [3, 2]]
+        super(coded, typed, mssge)
+    end
+
     def table
         rows = [header_row]
         # (7077) Item description type, coded

@@ -18,6 +18,7 @@ class Document
                 when "UNT"; UNT.new(*params)
                 when "UNZ"; UNZ.new(*params)
                 when "BGM"; BGM.new(*params)
+                when "ALI"; ALI.new(*params)
                 when "DTM"; DTM.new(*params)
                 when "FTX"; FTX.new(*params)
                 when "NAD"; NAD.new(*params)
@@ -34,6 +35,7 @@ class Document
                 when "PCI"; PCI.new(*params)
                 when "LOC"; LOC.new(*params)
                 when "INV"; INV.new(*params)
+                when "PAC"; INV.new(*params)
                 else; Line.new(*params)
                 end
             rescue => exception
@@ -75,36 +77,22 @@ class Document
         end
     end
 
-    def highlighted
+    def html
         @lines.each do |line|
             puts line.html
         end
     end
-end
 
-return if ARGV.length == 0
-paths = ARGV.map { |param| File.file?(param) ? param : nil }.compact
-return if paths.empty?
-
-for path in paths do
-    begin
-        # Read lines from path
-        lines = File.readlines(path, :encoding => 'utf-8')
-        document = Document.new(lines)
-        if ARGV.include?("--html")
-            document.lines.each do |line|
-                segment_to_html_table(line)
+    def timeline
+        times = []
+        @lines.each do |line|
+            if line.tag.value == "UNB"
+                times << ["Preparation date time", line.time + " " + line.date]
             end
-        elsif ARGV.include?("--debug")
-            document.debug
-        elsif ARGV.include?("--highlighted")
-            document.highlighted
-        else
-            document.highlighted
+            if line.tag.value == "DTM"
+                times << [line.qualifier.ref, line.interpret]
+            end
         end
-    rescue => exception
-        puts exception.inspect
-        puts exception.backtrace
-        exit
+        return times.sort { |a, b| Time.parse(a[1]) <=> Time.parse(b[1]) }
     end
 end

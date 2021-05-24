@@ -1,3 +1,5 @@
+@import './node_modules/bulma-timeline/dist/css/bulma-timeline.min.css';
+
 @font-face {
     font-family: "Roboto Mono";
     src: url('./assets/RobotoMono.ttf');
@@ -63,6 +65,19 @@ table {
     padding: 128px 64px;
     align-items: center;
     justify-content: center;
+}
+
+#copy-icon {
+    font-size: 1.6em;
+    margin-bottom: 16px;
+}
+
+#copy-indicator {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: auto;
+    padding-left: 8px;
 }
 
 img {

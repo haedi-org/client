@@ -1,10 +1,13 @@
-var exec = require('child_process').exec
+var exec = require('child_process').exec;
+const execSync = require('child_process').execSync;
 
 //var edi_path = './examples/kingfisher_store-replen-order.edi';
 //var edi_path = './examples/babelway.edi';
 //var edi_path = './examples/edidev_desadv.edi';
-//var edi_path = '..\\..\\machin-dev\\edi\\samples\\INVRPT_D01B_gs1_ref.edi';
-var edi_path = './samples/INVRPT_D13A_continental_ref.edi';
+
+//var edi_path = './samples/INVRPT_D13A_continental_ref.edi';
+//var edi_path = './samples/INVRPT_D01B_gs1_ref.edi';
+var edi_path = './samples/DESADV_D01B_ecosio.edi';
 
 function basename(path) {
     return path.split('\\').reverse()[0];
@@ -75,7 +78,7 @@ function onRawBtnClick() {
     setButtonsInactive();
     document.getElementById("stdout").style.backgroundColor = "#F5F5F5";
     document.getElementById("rawBtn").className = "is-active";
-    runCommand('--raw');
+    runCommand('--html');
 }
 
 function onDiagnosticsBtnClick() {
@@ -83,7 +86,7 @@ function onDiagnosticsBtnClick() {
     setButtonsInactive();
     document.getElementById("stdout").style.backgroundColor = "#FFFFFF";
     document.getElementById("diagnosticsBtn").className = "is-active";
-    runCommand('--html');
+    runCommand('--refs');
 }
 
 function onPreviewBtnClick() {
@@ -99,12 +102,25 @@ function onTimelineBtnClick() {
     setButtonsInactive();
     document.getElementById("stdout").style.backgroundColor = "#FFFFFF";
     document.getElementById("timelineBtn").className = "is-active";
-    runCommand('--highlighted');
+    runCommand('--timeline');
+}
+
+const clipboardy = require('clipboardy');
+
+function copyStdout() {
+    var element = document.getElementById('stdout');
+    var text = element.innerText || element.textContent;
+    clipboardy.writeSync(text.replace('Copied!', ''));
+    replaceText('copy-indicator', 'Copied!');
 }
 
 const customTitlebar = require('custom-electron-titlebar');
 
 new customTitlebar.Titlebar({
-    backgroundColor: customTitlebar.Color.fromHex('#FFF'),
+    backgroundColor: customTitlebar.Color.fromHex('#FFFFFF'),
     menu: null
 })
+
+function openBrowser(url) {
+    execSync(`start ${url}`)
+}

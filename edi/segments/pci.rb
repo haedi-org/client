@@ -7,6 +7,12 @@ class PCI < Line
         @shipping_marks       = val(2, 0)
     end
 
+    def html
+        coded = [[1, 0]]
+        typed = [[2, 0]]
+        super(coded, typed)
+    end
+
     def table
         rows = [header_row]
         # (4233) Marking instructions, coded

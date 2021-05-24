@@ -28,10 +28,10 @@ class UNB < Line
         @recipient_internal_id = val(3, 2)
         # (0046) Interchange recipient internal sub-identification
         @recipient_internal_sub_id = val(3, 3)
-        # (0017) Date - YYMMDD (101)
-        @date = val(4, 0)
-        # (0019) Time - HHMM (401)
-        @time = val(4, 1)
+        # (0017) Date of preparation - YYMMDD (101)
+        @preparation_date = val(4, 0)
+        # (0019) Time of preparation - HHMM (401)
+        @preparation_time = val(4, 1)
         # (0020) Interchange control reference
         @control_reference = val(4, 2)
         # (0022) Recipient reference/password
@@ -48,6 +48,20 @@ class UNB < Line
         @agreement_identifier = val(5, 5)
         # (0035) Test indicator
         @test_indicator = val(5, 6, "0035")
+    end
+
+    def date
+        return nil if @preparation_date == nil
+        return case @preparation_date.length
+            when 6; interpret_date(@preparation_date, "101")
+            when 8; interpret_date(@preparation_date, "102")
+            else; @preparation_date
+        end
+    end
+
+    def time
+        return nil if @preparation_time == nil
+        return interpret_date(@preparation_time, "401")
     end
 
     def html
@@ -117,13 +131,13 @@ class UNB < Line
                 "Interchange recipient internal sub-identification", 
                 @recipient_internal_sub_id]
         end
-        # (0017) Date - YYMMDD (101)
-        unless @date == nil
-            rows << ["0017", "Date", @date, interpret_date(@date, "101")]
+        # (0017) Date of preperation - YYMMDD (101)
+        unless @preparation_date == nil
+            rows << ["0017", "Date", @preparation_date, date]
         end
-        # (0019) Time - HHMM (401)
-        unless @time == nil
-            rows << ["0019", "Time", @time, interpret_date(@time, "401")]
+        # (0019) Time of preperation - HHMM (401)
+        unless @preparation_time == nil
+            rows << ["0019", "Time", @preparation_time, time]
         end
         # (0020) Interchange control reference
         unless @control_reference == nil

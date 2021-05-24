@@ -19,6 +19,7 @@ function createWindow () {
     
     win.removeMenu()
     win.setMenuBarVisibility(false)
+    //win.toggleDevTools()
     win.loadFile('index.html')
 }
 

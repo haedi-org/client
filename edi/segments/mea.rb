@@ -23,6 +23,12 @@ class MEA < Line
         @significant_digits = val(3, 4)
     end
 
+    def html
+        coded = [[1, 0], [2, 0], [2, 1], [2, 2]]
+        typed = [[2, 3], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4]]
+        super(coded, typed)
+    end
+
     def table
         rows = [header_row]
         # (6311) Measurement purpose qualifier
