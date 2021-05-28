@@ -1,5 +1,5 @@
 class Document
-    attr_reader :raw, :lines
+    attr_reader :raw, :lines, :version, :message
 
     def initialize(lines)
         @raw = lines.dup
@@ -59,6 +59,7 @@ class Document
             if line[0, 3] == "UNH"
                 unh = UNH.new(line, @version, @chars)
                 @version = unh.message_version
+                @message = unh.message_type
             end
         end
     end

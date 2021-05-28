@@ -18,8 +18,9 @@ def segment_to_html_table(line)
     else
         headers = ['Code', 'Title', 'Value', 'Description']
     end
-    table_class = "table is-bordered is-striped is-hoverable"
+    table_class = "table is-bordered is-striped is-hoverable is-small"
     table_style = "width: 100%; margin-bottom: 0; word-break: break-word;"
+    table_style += "font-size: 0.85em;"
     puts "<table class='#{table_class}' style='#{table_style}'>"
     puts "<colgroup>"
     puts "<col style='width: 64px; max-width: 64px'>"    # Code

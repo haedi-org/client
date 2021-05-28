@@ -2,6 +2,7 @@ require 'csv'
 require 'json'
 require 'time'
 
+require './test.rb'
 require './html.rb'
 require './reference.rb'
 require './version.rb'

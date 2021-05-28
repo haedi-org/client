@@ -1,3 +1,6 @@
+EDIFACT_DOCUMENTS_PATH = "./reference/edifact_documents.csv"
+EDIFACT_SEGMENTS_PATH = "./reference/edifact_segments.csv"
+
 Reference = Struct.new(
     :value,
     :ref,
@@ -56,4 +59,15 @@ def csv_reference(path, value)
         end
     end
     return []
+end
+
+def read_document(path)
+    lines = File.readlines(path, :encoding => 'utf-8')
+    return lines
+    #return lines.join.gsub("\n", "").gsub("\r", "")
+end
+
+def strip_csv_column(path, column)
+    lines = File.readlines(path, :encoding => 'utf-8')
+    return lines.map! { |line| line.split(",")[column] }
 end

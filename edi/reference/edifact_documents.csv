@@ -1,0 +1,151 @@
+UN/EDIFACT,APERAK,Application Error And Acknowledgement
+UN/EDIFACT,AUTACK,Secure Authentication And Acknowledgement Message
+UN/EDIFACT,AUTHOR,Authorization Message
+UN/EDIFACT,BANSTA,Banking Status
+UN/EDIFACT,BAPLIE,Bayplan/Stowage Plan Occupied And Empty Locations Message
+UN/EDIFACT,BAPLTE,Bayplan/Stowage Plan Total Numbers
+UN/EDIFACT,BOPBNK,Bank Transactions And Portfolio Transactions Report
+UN/EDIFACT,BOPCUS,Balance Of Payment Customer Transaction Report
+UN/EDIFACT,BOPDIR,Direct Balance Of Payment Declaration
+UN/EDIFACT,BOPINF,Balance Of Payment Information From Customer
+UN/EDIFACT,CALINF,Call Info
+UN/EDIFACT,CASINT,Request For Legal Administration Action In Civil Proceedings Message
+UN/EDIFACT,CASRES,Legal Administration Response In Civil Proceeding
+UN/EDIFACT,COARRI,Container Discharge/Loading Report
+UN/EDIFACT,CODECO,Container Gate-In/Gate-Out Report
+UN/EDIFACT,CODENO,Permit Expiration/Clearance Ready Notice
+UN/EDIFACT,COEDOR,Container Stock Report
+UN/EDIFACT,COHAOR,Container Special Handling Order
+UN/EDIFACT,COLREQ,Request For A Documentary Collection
+UN/EDIFACT,COMDIS,Commercial Dispute
+UN/EDIFACT,CONAPW,Advice On Pending Works
+UN/EDIFACT,CONDPV,Direct Payment Valuation Message
+UN/EDIFACT,CONDRA,Drawing Administration
+UN/EDIFACT,CONDRO,Drawing Organization
+UN/EDIFACT,CONEST,Establishment Of Contract Message
+UN/EDIFACT,CONITT,Invitation To Tender Message
+UN/EDIFACT,CONPVA,Payment Valuation Message
+UN/EDIFACT,CONQVA,Quantity Valuation Message
+UN/EDIFACT,CONRPW,Response Of Pending Works
+UN/EDIFACT,CONTEN,Tender Message
+UN/EDIFACT,CONTRL,Edifact Control Message (Vers 2, Rel 2)
+UN/EDIFACT,CONWQD,Work Item Quantity Determination
+UN/EDIFACT,COPARN,Container Announcement
+UN/EDIFACT,COPINO,Container Pre-Notification
+UN/EDIFACT,COPRAR,Container Discharge/Loading Order
+UN/EDIFACT,COREOR,Container Release Order
+UN/EDIFACT,COSTCO,Container Stuffing/Stripping Confirmation
+UN/EDIFACT,COSTOR,Container Stuffing/Stripping Order
+UN/EDIFACT,CREADV,Credit Advice Message
+UN/EDIFACT,CREEXT,Extended Credit Advice Message
+UN/EDIFACT,CREMUL,Multiple Credit Advice
+UN/EDIFACT,CUSCAR,Customs Cargo Report Message
+UN/EDIFACT,CUSDEC,Customs Declaration Message
+UN/EDIFACT,CUSEXP,Customs Express Consignment Declaration
+UN/EDIFACT,CUSPED,Periodic Customs Declaration
+UN/EDIFACT,CUSREP,Customs Conveyance Report Message
+UN/EDIFACT,CUSRES,Customs Response Message
+UN/EDIFACT,DEBADV,Debit Advice Message
+UN/EDIFACT,DEBMUL,Multiple Debit Advice
+UN/EDIFACT,DELFOR,Delivery Schedule Message
+UN/EDIFACT,DELJIT,Delivery Just-In Time Message
+UN/EDIFACT,DESADV,Despatch Advice Message
+UN/EDIFACT,DESTIM,Equipment Damage And Repair Estimate
+UN/EDIFACT,DGRECA,Dangerous Goods Recapitulation
+UN/EDIFACT,DIRDEB,Direct Debit Message
+UN/EDIFACT,DIRDEF,Directory Definition
+UN/EDIFACT,DOCADV,Documentary Credit Advice Message
+UN/EDIFACT,DOCAMA,Advice Of An Amendment Of A Documentary Credit
+UN/EDIFACT,DOCAMI,Documentary Credit Amendment Information
+UN/EDIFACT,DOCAMR,Request For An Amendment Of A Documentary Credit
+UN/EDIFACT,DOCAPP,Documentary Credit Application Message
+UN/EDIFACT,DOCARE,Response To An Amendment Of A Documentary Credit
+UN/EDIFACT,DOCINF,Documentary Credit Issuance Information Message
+UN/EDIFACT,FINCAN,Financial Cancellation
+UN/EDIFACT,FINSTA,Financial Statement Of An Account
+UN/EDIFACT,GENRAL,General Purpose
+UN/EDIFACT,HANMOV,Cargo/Goods Handling And Movement
+UN/EDIFACT,IFCSUM,Forwarding And Consolidation Summary Message
+UN/EDIFACT,IFTCCA,Forwarding And Transport Shipment Charge Calculation
+UN/EDIFACT,IFTDGN,Dangerous Goods Notification
+UN/EDIFACT,IFTFCC,International Transport Freight Costs & Other Charge
+UN/EDIFACT,IFTIAG,Dangerous Cargo List
+UN/EDIFACT,IFTMAN,Arrival Notice
+UN/EDIFACT,IFTMBC,Booking Confirmation Message
+UN/EDIFACT,IFTMBF,Firm Booking Message
+UN/EDIFACT,IFTMBP,Provisional Booking Message
+UN/EDIFACT,IFTMCS,Instruction Contract Status Message
+UN/EDIFACT,IFTMIN,Instruction Message
+UN/EDIFACT,IFTRIN,Forwarding And Transport Rate Information Message
+UN/EDIFACT,IFTSAI,Forwarding And Transport Schedule And Availability
+UN/EDIFACT,IFTSTA,Cargo Status
+UN/EDIFACT,IFTSTQ,International Multimodal Status
+UN/EDIFACT,INFENT,Enterprise Accounting Information
+UN/EDIFACT,INSPRE,Insurance Premium
+UN/EDIFACT,INVOIC,Invoice Message
+UN/EDIFACT,INVRPT,Inventory Report Message
+UN/EDIFACT,ITRRPT,In Transit Report Detail
+UN/EDIFACT,JAPRES,Job Application Result
+UN/EDIFACT,JINFDE,Job Information Demand Message
+UN/EDIFACT,JOBAPP,Job Application Proposal Message
+UN/EDIFACT,JOBCON,Job Order Confirmation Message
+UN/EDIFACT,JOBMOD,Job Order Modification Message
+UN/EDIFACT,JOBOFF,Job Order Message
+UN/EDIFACT,LREACT,Life Reinsurance Activity
+UN/EDIFACT,MEDPID,Person Identification Message
+UN/EDIFACT,MEDREQ,Medical Service Request
+UN/EDIFACT,MEDRPT,Medical Service Report
+UN/EDIFACT,MEDRUC,Medical Resource Usage And Cost
+UN/EDIFACT,MEQPOS,Means Of Transport And Equipment Position
+UN/EDIFACT,MOVINS,Stowage Instruction
+UN/EDIFACT,MSCONS,Metered Services Consumption Report
+UN/EDIFACT,ORDCHG,Purchase Order Change Request Message
+UN/EDIFACT,ORDERS,Purchase Order Message
+UN/EDIFACT,ORDRSP,Purchase Order Response Message
+UN/EDIFACT,OSTENQ,Order Status Enquiry
+UN/EDIFACT,OSTRPT,Order Status Report
+UN/EDIFACT,PARTIN,Party Information Message
+UN/EDIFACT,PAXLST,Passenger List Message
+UN/EDIFACT,PAYDUC,Payroll Deductions Advice Message
+UN/EDIFACT,PAYEXT,Extended Payment Order Message
+UN/EDIFACT,PAYMUL,Multiple Payment Order Message
+UN/EDIFACT,PAYORD,Payment Order Message
+UN/EDIFACT,PRICAT,Price/Sales Catalogue Message
+UN/EDIFACT,PRIHIS,Pricing History
+UN/EDIFACT,PRODAT,Product Data
+UN/EDIFACT,PRODEX,Product Exchange Reconciliation
+UN/EDIFACT,PROINQ,Product Inquiry
+UN/EDIFACT,PRPAID,Insurance Premium Payment
+UN/EDIFACT,QALITY,Quality Data Message
+UN/EDIFACT,QUOTES,Quote Message
+UN/EDIFACT,REBORD,Reinsurance Bordereau
+UN/EDIFACT,RECADV,Receiving Advice
+UN/EDIFACT,RECALC,Reinsurance Calculation
+UN/EDIFACT,RECECO,Credit Risk Cover
+UN/EDIFACT,RECLAM,Reinsurance Claims
+UN/EDIFACT,REMADV,Remittance Advice Message
+UN/EDIFACT,REPREM,Reinsurance Premium
+UN/EDIFACT,REQDOC,Request For Document
+UN/EDIFACT,REQOTE,Request For Quote Message
+UN/EDIFACT,RESETT,Reinsurance Settlement
+UN/EDIFACT,RESMSG,Reservation
+UN/EDIFACT,RETACC,Reinsurance Technical Account
+UN/EDIFACT,RETANN,Announcement For Returns
+UN/EDIFACT,RETINS,Safety And Hazard Data
+UN/EDIFACT,SAFHAZ,Safety And Hazard Data Message
+UN/EDIFACT,SANCRT,Sanitary/Phytosanitary Certificate
+UN/EDIFACT,SLSFCT,Sales Forecast
+UN/EDIFACT,SLSRPT,Sales Data Report
+UN/EDIFACT,SSIMOD,Modification Of Identity Details Message
+UN/EDIFACT,SSRECH,Worker’s Insurance History Message
+UN/EDIFACT,SSREGW,Notification Of Registration Of A Worker
+UN/EDIFACT,STATAC,Statement Of Account Message
+UN/EDIFACT,SUPCOT,Superannuation Contributions Advice Message
+UN/EDIFACT,SUPMAN,Superannuation Maintenance Message
+UN/EDIFACT,SUPRES,Supplier Response
+UN/EDIFACT,TANSTA,Tank Status Report
+UN/EDIFACT,VATDEC,Value Added Tax
+UN/EDIFACT,VESDEP,Vessel Departure
+UN/EDIFACT,WASDIS,Waste Disposal Information
+UN/EDIFACT,WKGRDC,Work Grant Decision Message
+UN/EDIFACT,WKGRRE,Work Grant Request Message

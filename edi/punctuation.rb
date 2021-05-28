@@ -1,3 +1,5 @@
+DEFAULT_SEGMENT_TERMINATOR = '\''
+
 Punctuation = Struct.new(
     :component_element_seperator,
     :data_element_seperator,

@@ -63,14 +63,14 @@ function setButtonsInactive() {
     document.getElementById("timelineBtn").className = "";
 }
 
-function removeIdleAnimation() {
-    document.getElementById("waiting").style.display = "none";
-    document.getElementById("stdout").style.display = "block";
-}
-
 function showIdleAnimation() {
     document.getElementById("waiting").style.display = "flex";
     document.getElementById("stdout").style.display = "none";
+}
+
+function removeIdleAnimation() {
+    document.getElementById("waiting").style.display = "none";
+    document.getElementById("stdout").style.display = "block";
 }
 
 function onRawBtnClick() {
