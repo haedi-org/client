@@ -10,6 +10,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bulma-timeline": "^3.0.4",
     "clipboardy": "^2.3.0",
-    "custom-electron-titlebar": "^3.2.7"
+    "custom-electron-titlebar": "^3.2.7",
+    "electron": "^13.0.1"
   }
 }
