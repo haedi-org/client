@@ -1,5 +1,5 @@
-EDIFACT_DOCUMENTS_PATH = "./reference/edifact_documents.csv"
-EDIFACT_SEGMENTS_PATH = "./reference/edifact_segments.csv"
+EDIFACT_DOCUMENTS_PATH = "./codes/edifact_documents.csv"
+EDIFACT_SEGMENTS_PATH  = "./codes/edifact_segments.csv"
 
 Reference = Struct.new(
     :value,
