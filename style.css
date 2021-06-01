@@ -102,6 +102,24 @@ div#stdout {
     padding: 16px;
 }
 
+div#path-input {
+    border-bottom: 1px solid #E7EBED;
+}
+
+#path-input input {
+    border: none;
+    box-shadow: none;
+}
+
+#path-input input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+#path-input button {
+    margin-right: 4px;
+}
+
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 12px;
