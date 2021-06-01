@@ -9,9 +9,14 @@ const execSync = require('child_process').execSync;
 //var edi_path = './samples/INVRPT_D01B_gs1_ref.edi';
 var edi_path = './samples/DESADV_D01B_ecosio.edi';
 
+function set_edi_path() {
+    var path = document.getElementById("path").files[0].path;
+    edi_path = path;
+}
+
 function basename(path) {
     return path.split('\\').reverse()[0];
- }
+}
 
 function onFileBtnClick() {
     var path = document.getElementById("fileBtn").files[0].path;

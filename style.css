@@ -102,21 +102,21 @@ div#stdout {
     padding: 16px;
 }
 
-div#path-input {
+div#path-container {
     border-bottom: 1px solid #E7EBED;
 }
 
-#path-input input {
+#path-input {
     border: none;
     box-shadow: none;
 }
 
-#path-input input:focus {
+#path-input:focus {
     border: none;
     box-shadow: none;
 }
 
-#path-input button {
+#path-container button {
     margin-right: 4px;
 }
 
