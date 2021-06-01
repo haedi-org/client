@@ -92,8 +92,8 @@ div#stdout {
     font-family: "Roboto Mono", monospace;
     font-size: 0.8em;
     color: #2B2B2B;
-    min-height: calc(100vh - 138px);
-    max-height: calc(100vh - 138px);
+    min-height: calc(100vh - 180px);
+    max-height: calc(100vh - 180px);
     min-width: calc(75vw - 200px);
     max-width: calc(75vw - 200px);
     white-space: pre-wrap; 
@@ -109,6 +109,7 @@ div#path-container {
 #path-input {
     border: none;
     box-shadow: none;
+    font-family: "Roboto Mono", monospace;
 }
 
 #path-input:focus {

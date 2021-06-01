@@ -10,8 +10,10 @@ const execSync = require('child_process').execSync;
 var edi_path = './samples/DESADV_D01B_ecosio.edi';
 
 function set_edi_path() {
-    var path = document.getElementById("path").files[0].path;
+    var path = document.getElementById("path-input").value;
+    console.log(path);
     edi_path = path;
+    onRawBtnClick();
 }
 
 function basename(path) {
