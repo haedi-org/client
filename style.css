@@ -82,8 +82,8 @@ table {
     padding-left: 8px;
 }
 
-img {
-    height: 24px;
+img#logo {
+    height: 32px;
     margin-left: 16px;
 }
 
