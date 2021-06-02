@@ -39,5 +39,8 @@ require './lib/segments/cps.rb'
 require './lib/segments/pci.rb'
 require './lib/segments/loc.rb'
 require './lib/segments/inv.rb'
+require './lib/segments/cdi.rb'
+require './lib/segments/cnt.rb'
+require './lib/segments/moa.rb'
 
 require './lib/run.rb'

@@ -4,6 +4,7 @@ GEM
     colorize (0.8.1)
 
 PLATFORMS
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES

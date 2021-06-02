@@ -1,13 +1,7 @@
 var exec = require('child_process').exec;
 const execSync = require('child_process').execSync;
 
-//var edi_path = './examples/kingfisher_store-replen-order.edi';
-//var edi_path = './examples/babelway.edi';
-//var edi_path = './examples/edidev_desadv.edi';
-
-//var edi_path = './samples/INVRPT_D13A_continental_ref.edi';
-//var edi_path = './samples/INVRPT_D01B_gs1_ref.edi';
-var edi_path = './samples/DESADV_D01B_ecosio.edi';
+var edi_path = './samples/RETANN_D96A_kingfisher_0.edi';
 
 function set_edi_path() {
     var path = document.getElementById("path-input").value;

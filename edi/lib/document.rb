@@ -35,7 +35,10 @@ class Document
                 when "PCI"; PCI.new(*params)
                 when "LOC"; LOC.new(*params)
                 when "INV"; INV.new(*params)
-                when "PAC"; INV.new(*params)
+                when "PAC"; PAC.new(*params)
+                when "CDI"; CDI.new(*params)
+                when "CNT"; CNT.new(*params)
+                when "MOA"; MOA.new(*params)
                 else; Line.new(*params)
                 end
             rescue => exception

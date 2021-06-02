@@ -17,6 +17,12 @@ class PRI < Line
         @sub_line_price_changed = val(2, 0, "5213")
     end
 
+    def html
+        coded = [[1, 0], [1, 2], [1, 3], [2, 0]]
+        typed = [[1, 1], [1, 4], [1, 5]]
+        super(coded, typed)
+    end
+
     def table
         rows = [header_row]
         # (5125) Price qualifier
