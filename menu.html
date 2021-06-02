@@ -3,56 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>EDI Warehouse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="node_modules/bulma-ribbon/dist/css/bulma-ribbon.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/fonts.css"/>
     <script defer src="./menu.js"></script>
 </head>
-
-<style>
-    body {
-        padding: 2em;
-    }
-
-    .option {
-        display: flex;
-        align-items: flex-end;
-        transition: border 0.25s linear, box-shadow 0.3s ease-in-out;;
-        padding: 1em;
-        border-radius: 4px;
-        border: 1px solid #DBDBDB;
-        height: 100px;
-    }
-    
-    .option:hover {
-        border: 1px solid rgb(86, 180, 239);
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
-        cursor: pointer;
-    }
-</style>
 
 <body>
     <!--<img src="logo.png" style="height: 32px; margin-bottom: 16px">-->
     <div class="columns is-gapless wrapper">
         <div class="column pr-0 py-0">
-            <div class="column-header" style="border-bottom: 1px solid #DBDBDB;">
+            <div class="column-header">
                 <img id="logo" src="./assets/coffee_32.png">
             </div>
-            <div class="columns is-8 block" style="min-height: 100vh">
-                <div id="edifactBtn" class="column">
-                    <div class="option">UN/EDIFACT</div>
+            <div class="columns is-multiline m-4">
+                <div class="column is-one-quarter">
+                    <div class="box has-ribbon-left">
+                        <div class="ribbon is-info is-small">
+                            <span class="icon is-left">
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                            Collection
+                        </div>
+                        <br><br><p>Sample files</p>
+                    </div>
                 </div>
-                <div class="column">
-                    <div class="option">ANSI X12</div>
+                <div class="column is-one-quarter">
+                    <div class="box has-ribbon-left">
+                        <div class="ribbon is-info is-small">
+                            <span class="icon is-left">
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                            Code list
+                        </div>
+                        <br><br><p>GS1</p>
+                    </div>
                 </div>
-                <div class="column">
-                    <div class="option">TRADACOMS</div>
+                <div class="column is-one-quarter">
+                    <div class="box has-ribbon-left">
+                        <div class="ribbon is-info is-small">
+                            <span class="icon is-left">
+                                <i class="fas fa-wrench"></i>
+                            </span>
+                            Template
+                        </div>
+                        <br><br><p>DESADV template</p>
+                    </div>
                 </div>
-                <div class="column">
-
+                <div class="column is-one-quarter">
+                    <div class="box has-ribbon-left">
+                        <div class="ribbon is-info is-small">
+                            <span class="icon is-left">
+                                <i class="fas fa-bars"></i>
+                            </span>
+                            Collection
+                        </div>
+                        <br><br><p>Outgoing FTP</p>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="box has-ribbon-left">
+                        <div class="ribbon is-info is-small">
+                            <span class="icon is-left">
+                                <i class="fas fa-bars"></i>
+                            </span>
+                            Collection
+                        </div>
+                        <br><br><p>Amazon FTP</p>
+                    </div>
                 </div>
             </div>
         </div>

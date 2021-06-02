@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "bulma-ribbon": "^0.1.1",
     "bulma-timeline": "^3.0.4",
     "clipboardy": "^2.3.0",
     "custom-electron-titlebar": "^3.2.7",
