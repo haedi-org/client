@@ -16,6 +16,18 @@ Dir["./codes/*.json"].each do |path|
     file.close
 end
 
+def lookup_structure(message)
+    path = "./structures/#{message}.json"
+    if File.file?(path)
+        file = File.open(path)
+        data = JSON.load(file)
+        file.close
+    else
+        data = {}
+    end
+    return data
+end
+
 def lookup_tag(code_list, tag)
     return nil if tag == ""
     ref, desc = "", ""

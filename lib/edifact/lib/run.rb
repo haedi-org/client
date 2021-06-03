@@ -26,6 +26,8 @@ else
                     end
                 elsif ARGV.include?("--debug")
                     document.debug
+                elsif ARGV.include?("--structure")
+                    document.structure
                 elsif ARGV.include?("--html")
                     html_copy_btn()
                     document.html

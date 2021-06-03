@@ -49,6 +49,13 @@ class Document
         end
     end
 
+    def structure
+        data = lookup_structure(message.value)
+        unless data == {}
+            Structure.new(self, data)
+        end
+    end
+
     def assign_values
         # Get punctuation values from UNA line
         una = lines[0, 3] == 'UNA' ? lines[0, 9] : nil

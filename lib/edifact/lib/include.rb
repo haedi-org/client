@@ -13,9 +13,8 @@ require './lib/version.rb'
 require './lib/punctuation.rb'
 require './lib/line.rb'
 require './lib/date.rb'
+require './lib/structure.rb'
 require './lib/document.rb'
-
-require './lib/documents/desadv.rb'
 
 require './lib/segments/una.rb'
 require './lib/segments/unh.rb'
