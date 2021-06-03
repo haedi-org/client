@@ -1,3 +1,12 @@
+def get_document(lines)
+    document = Document.new(lines)
+#    document = case document.message.value
+#        when "DESADV"; DESADV.new(lines)
+#        else; document
+#    end
+    return document
+end
+
 if ARGV.length == 0
     unit_test
 else
@@ -10,7 +19,7 @@ else
             lines = read_document(path)
             # Create document
             if valid_document?(lines)
-                document = Document.new(lines)
+                document = get_document(lines)
                 if ARGV.include?("--refs")
                     document.lines.each do |line|
                         segment_to_html_table(line)

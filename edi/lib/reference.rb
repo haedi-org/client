@@ -71,3 +71,9 @@ def strip_csv_column(path, column)
     lines = File.readlines(path, :encoding => 'utf-8')
     return lines.map! { |line| line.split(",")[column] }
 end
+
+class Object
+    def is_number?
+        to_f.to_s == to_s || to_i.to_s == to_s
+    end
+end

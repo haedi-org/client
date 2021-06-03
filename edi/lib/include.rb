@@ -15,6 +15,8 @@ require './lib/line.rb'
 require './lib/date.rb'
 require './lib/document.rb'
 
+require './lib/documents/desadv.rb'
+
 require './lib/segments/una.rb'
 require './lib/segments/unh.rb'
 require './lib/segments/unb.rb'
