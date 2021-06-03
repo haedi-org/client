@@ -52,7 +52,7 @@ class Document
     def structure
         data = lookup_structure(message.value)
         unless data == {}
-            Structure.new(self, data)
+            puts Structure.new(self, data).html
         end
     end
 
