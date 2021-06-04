@@ -16,8 +16,9 @@ Dir["./codes/*.json"].each do |path|
     file.close
 end
 
-def lookup_structure(message)
-    path = "./structures/#{message}.json"
+def lookup_structure(message, version)
+    path = "./structures/#{message}_#{version}.json"
+    path = "./structures/#{message}.json" unless File.file?(path)
     if File.file?(path)
         file = File.open(path)
         data = JSON.load(file)

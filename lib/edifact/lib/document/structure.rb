@@ -1,12 +1,14 @@
 class Structure
     attr_reader :document, :structure, :data
     
-    def initialize(document, rules)
+    def initialize(document, rules, with_subgroups = false)
         @document = document
         @rules = rules
+        @with_subgroups = with_subgroups
         @group_count = rules.length
         # Calculate group data and split into subgroups
-        @data = split_duplicates(groups())
+        @data = groups()
+        @data = split_duplicates(@data) if with_subgroups
     end
 
     def html
@@ -25,9 +27,14 @@ class Structure
     end
 
     def debug
-        @data.each do |group_no, subgroups|
-            subgroups.each do |subgroup|
-                subgroup.each { |line| puts "#{group_no}\t#{line.raw}" }
+        @data.each do |group_no, value|
+            if @with_subgroups
+                value.each do |subgroup|
+                    subgroup.each { |line| puts "#{group_no}\t#{line.raw}" }
+                    puts "\n"
+                end
+            else
+                value.each { |line| puts "#{group_no}\t#{line.raw}" }
                 puts "\n"
             end
         end
@@ -55,8 +62,8 @@ class Structure
             lines_dup = lines_dup[1..-1]
         end
         # Iterate through lines; increment group index when needed
-        line_no, group_no = 0, 0
-        until (line_no >= lines_dup.length) or (group_no >= @group_count)
+        line_no, group_no, break_no = 0, 0, 9999
+        until (line_no >= lines_dup.length) or (break_no < 0)
             line = lines_dup[line_no]
             exists, order = exists_in_group?(line.tag.value, group_no)
             if exists
@@ -67,15 +74,21 @@ class Structure
                 end
                 line_no += 1
             else
-                group_no += 1
+                group_no = (group_no + 1) % @group_count
+                break_no -= 1
             end
         end
+        #data.each { |a, b| b.each { |line| puts line.raw }}
         return data
     end
 
     def segment_in_group?(group, segment)
         tag = segment.tag.value
-        group.each { |line| return true if tag == line.tag.value }
+        group.each do |line| 
+            if (tag == line.tag.value)
+                return true
+            end
+        end
         return false
     end
 

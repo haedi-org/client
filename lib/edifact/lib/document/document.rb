@@ -50,9 +50,11 @@ class Document
     end
 
     def structure
-        data = lookup_structure(message.value)
+        puts @message.value
+        puts @version.ref
+        data = lookup_structure(@message.value, @version.ref)
         unless data == {}
-            puts Structure.new(self, data).html
+            Structure.new(self, data).debug
         end
     end
 
