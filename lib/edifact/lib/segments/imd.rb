@@ -2,23 +2,38 @@ class IMD < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (7077) Item description type, coded
-        @description_type         = val(1, 0, "7077")
+        @description_type = define([1, 0], "7077", "Item description type", 
+            true)
         # (7081) Item characteristic, coded
-        @characteristic           = val(2, 0, "7081")
+        @characteristic = define([2, 0], "7081", "Item charasteristic", true)
         # (1131) Item characteristic code list qualifier
-        @characteristic_code_list = val(2, 1, "1131")
+        @characteristic_code_list = define([2, 1], "1131", 
+            "Item characteristic code list qualifier", true)
         # (3055) Item characteristic code list responsible agency, coded
-        @characteristic_agency    = val(2, 2, "3055")
+        @characteristic_agency = define([2, 2], "3055", 
+            "Item characteristic code list responsible agency", true)
         # (7009) Item description identification
-        @description_code         = val(3, 0)
+        @description_code = define([3, 0], "7009", 
+            "Item description identification")
         # (1131) Item description code list qualifier
-        @description_code_list    = val(3, 1, "1131")
+        @description_code_list = define([3, 1], "1131", 
+            "Item description code list qualifier", true)
         # (3055) Item description code list responsible agency, coded
-        @description_agency       = val(3, 2, "3055")
+        @description_agency = define([3, 2], "3055", 
+            "Item description code list responsible agency", true)
         # (7008) Item description
-        @description              = [val(3, 3), val(3, 4)].compact
+        @description = [
+            define([3, 3], "7008", "Item description"), 
+            define([3, 4], "7008", "Item description")
+        ].compact
         # (3453) Language, coded
-        @language                 = val(3, 5, "3453")
+        @language = define([3, 5], "3453", "Language", true)
+        # Push to elements
+        push_elements([
+            @description_type, @characteristic, @characteristic_code_list, 
+            @characteristic_agency, @description_code, @description_code_list,
+            @description_agency, @description
+        ].flatten)
     end
 
     def html
@@ -26,55 +41,6 @@ class IMD < Line
         typed = [[3, 0], [3, 3], [3, 4]]
         mssge = [[2, 1], [2, 2], [3, 1], [3, 2]]
         super(coded, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (7077) Item description type, coded
-        unless @description_type == nil
-            rows << coded_row("7077", "Item description type", 
-                @description_type)
-        end
-        # (7081) Item characteristic, coded
-        unless @characteristic == nil
-            rows << coded_row("7081", "Item characteristic", @characteristic)
-        end
-        # (1131) Item characteristic code list qualifier
-        unless @characteristic_code_list == nil
-            rows << coded_row("1131", "Item characteristic code list qualifier", 
-                @characteristic_code_list)
-        end
-        # (3055) Item characteristic code list responsible agency, coded
-        unless @characteristic_agency == nil
-            rows << coded_row("3055", 
-                "Item characteristic code list responsible agency", 
-                @characteristic_agency)
-        end
-        # (7009) Item description identification
-        unless @description_code == nil
-            rows << ["7009", "Item description identification", 
-                @description_code]
-        end
-        # (1131) Item description code list qualifier
-        unless @description_code_list == nil
-            rows << coded_row("1131", "Item description code list qualifier", 
-                @description_code_list)
-        end
-        # (3055) Item description code list responsible agency, coded
-        unless @description_agency == nil
-            rows << coded_row("3055", 
-                "Item description code list responsible agency", 
-                @description_agency)
-        end
-        # (7008) Item description
-        unless @description == nil
-            rows << ["7008", "Item description", @description.join("\n")]
-        end
-        # (3453) Language, coded
-        unless @language == nil
-            rows << coded_row("3453", "Language", @language)
-        end
-        return rows
     end
 
     def debug

@@ -6,6 +6,7 @@ class Line
         @version = version
         @chars = chars
         @data = @raw.dup
+        @elements = []
         # Remove last character if segment terminator
         @data = @data[0..-2] if (@data[-1] == @chars.segment_terminator)
         # Split component data elements within line
@@ -20,10 +21,21 @@ class Line
         end
     end
 
-    def val(a, b = nil, code = nil)
+    def define(loc, code, title, coded = false, version = @version.ref)
+        value = val(*loc)
+        return nil if (value == nil) or (value == "")
+        data = coded ? ref(code, value, version) : nil
+        desc, ref = data == nil ? ["", ""] : [data.desc, data.ref]
+        return Element.new(
+            loc, code, title, desc, value, ref, coded
+        )
+    end
+
+    def val(a, b = nil, code = nil, version = nil)
+        version = @version.ref if version == nil
         return nil unless (len() > a) && (b == nil || len(a) > b)
         return @data[a] if b == nil
-        return code == nil ? @data[a][b] : ref(code, val(a, b))
+        return code == nil ? @data[a][b] : ref(code, val(a, b, version))
     end
 
     def len(index = nil)
@@ -45,6 +57,10 @@ class Line
         return lookup unless lookup == nil
         # Return with no reference
         return Reference.new(val(0, 0), "", "", val(0, 0))
+    end
+
+    def push_elements(elements)
+        elements.compact.each { |e| @elements << e }
     end
 
     def debug
@@ -83,6 +99,12 @@ class Line
     end
 
     def table
-        return [header_row]
+        rows = [header_row]
+        @elements.each do |e|
+            rows << [
+                e.code, e.title, e.value, e.ref, e.desc
+            ]
+        end
+        return rows
     end
 end

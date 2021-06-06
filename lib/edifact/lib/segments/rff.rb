@@ -2,13 +2,17 @@ class RFF < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (1153) Reference qualifier
-        @reference        = val(1, 0, "1153")
+        @reference = define([1, 0], "1153", "Reference qualifier", true)
         # (1154) Reference number
-        @reference_number = val(1, 1)
+        @reference_number = define([1, 1], "1154", "Reference number")
         # (1156) Line number
-        @line_number      = val(1, 2)
+        @line_number = define([1, 2], "1156", "Line number")
         # (4000) Reference version number
-        @version          = val(1, 3)
+        @version = define([1, 3], "4000", "Reference version number")
+        # Push to element
+        push_elements([
+            @reference, @reference_number, @line_number, @version
+        ])
     end
 
     def html
@@ -16,27 +20,6 @@ class RFF < Line
         typed = [[1, 1]]
         mssge = [[1, 2], [1, 3]]
         super(codes, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (1153) Reference qualifier
-        unless @reference == nil
-            rows << coded_row("1153", "Reference qualifier", @reference)
-        end
-        # (1154) Reference number
-        unless @reference_number == nil
-            rows << ["1154", "Reference number", @reference_number]
-        end
-        # (1156) Line number
-        unless @line_number == nil
-            rows << ["1156", "Line number", @line_number]
-        end
-        # (4000) Reference version number
-        unless @version == nil
-            rows << ["4000", "Reference version number", @version]
-        end
-        return rows
     end
 
     def debug

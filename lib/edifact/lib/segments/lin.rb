@@ -2,53 +2,29 @@ class LIN < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (1082) Line item number
-        @line_item_number = val(1, 0)
+        @line_item_number = define([1, 0], "1082", "Line item number")
         # (1229) Action request/notification, coded
-        @action_request   = val(2, 0, "1229")
+        @action_request = define([2, 0], "1229", "Action request/notification", 
+            true)
         # (7140) Item number
-        @item_id          = val(3, 0)
+        @item_id = define([3, 0], "7140", "Item number")
         # (7143) Item number type, coded
-        @item_type        = val(3, 1, "7143")
+        @item_type = define([3, 1], "7143", "Item number type", true)
         # (1131) Code list qualifier
-        @code_list        = val(3, 2, "1131")
+        @code_list = define([3, 2], "1131", "Code list qualifier", true)
         # (3055) Code list responsible agency, coded
-        @agency           = val(3, 3, "3055")
+        @agency = define([3, 3], "3055", "Code list responsible agency", true)
+        # Push to elements
+        push_elements([
+            @line_item_number, @action_request, @item_id, @item_type, 
+            @code_list, @agency
+        ])
     end
 
     def html
         coded = [[1, 0], [2, 0], [3, 1]]
         typed = [[3, 0]]
         super(coded, typed)
-    end
-
-    def table
-        rows = [header_row]
-        # (1082) Line item number
-        unless @line_item_number == nil
-            rows << ["1082", "Line item number", @line_item_number]
-        end
-        # (1229) Action request/notification, coded
-        unless @action_request == nil
-            rows << coded_row("1229", "Action request/notification", 
-                @action_request)
-        end
-        # (7140) Item number
-        unless @item_id == nil
-            rows << ["7140", "Item number", @item_id]
-        end
-        # (7143) Item number type, coded
-        unless @item_type == nil
-            rows << coded_row("7143", "Item number type", @item_type) 
-        end
-        # (1131) Code list qualifier
-        unless @code_list == nil
-            rows << ["1131", "Code list qualifier", @code_list]
-        end
-        # (3055) Code list responsible agency, coded
-        unless @agency == nil
-            rows << ["3055", "Code list responsible agency", @agency]
-        end
-        return rows
     end
 
     def debug

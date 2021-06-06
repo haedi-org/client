@@ -2,9 +2,14 @@ class UNZ < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (0036) Interchange control count
-        @control_count = val(1, 0)
+        @control_count = define([1, 0], "0036", "Interchange control count")
         # (0020) Interchange control reference
-        @control_reference = val(2, 0)
+        @control_reference = define([2, 0], "0020", 
+            "Interchange control reference")
+        # Push to elements
+        push_elements([
+            @control_count, @control_reference
+        ])
     end
 
     def html
@@ -12,20 +17,6 @@ class UNZ < Line
         typed = [[2, 0]]
         mssge = [[1, 0]]
         super(coded, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (0036) Interchange control count
-        unless @control_count == nil
-            rows << ["0036", "Interchange control count", @control_count]
-        end
-        # (0020) Interchange control reference
-        unless @control_reference == nil
-            rows << ["0020", "Interchange control reference", 
-                @control_reference]
-        end
-        return rows
     end
 
     def debug

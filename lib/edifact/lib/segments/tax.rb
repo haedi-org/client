@@ -2,22 +2,14 @@ class TAX < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (5283) Duty/tax/fee function qualifier
-        @tax_function = val(1, 0, "5283")
+        @tax_function = define([1, 0], "5283", 
+            "Duty/tax/fee function qualifier", true)
         # (5153) Duty/tax/fee type, coded
-        @tax_type = val(2, 0, "5153")
-    end
-
-    def table
-        rows = [header_row]
-        # (5283) Duty/tax/fee function qualifier
-        unless @tax_function == nil
-            rows << coded_row("5283", "Duty/tax/fee function qualifier", @tax_function)
-        end
-        # (5153) Duty/tax/fee type, coded
-        unless @tax_type == nil
-            rows << coded_row("5153", "Duty/tax/fee type", @tax_type)
-        end
-        return rows
+        @tax_type = define([2, 0], "5153", "Duty/tax/fee type", true)
+        # Push to elements
+        push_elements([
+            @tax_function, @tax_type
+        ])
     end
 
     def debug

@@ -2,15 +2,22 @@ class LOC < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (3227) Location function code qualifier
-        @function = val(1, 0, "3227")
+        @function = define([1, 0], "3227", "Location function code qualifier", 
+            true)
         # (3225) Place/location identification
-        @identification = val(2, 0)
+        @identification = define([2, 0], "3225", 
+            "Place/location identification")
         # (1131) Location code list qualifier
-        @code_list = val(2, 1, "1131")
+        @code_list = define([2, 1], "1131", "Location code list qualifier", 
+            true)
         # (3055) Code list responsible agency, coded
-        @agency = val(2, 2, "3055")
+        @agency = define([2, 2], "3055", "Code list responsible agency", true)
         # (3244) Place/location
-        @location = val(2, 3)
+        @location = define([2, 3], "3244", "Place/location")
+        # Push to elements
+        push_elements([
+            @function, @identification, @code_list, @agency, @location
+        ])
     end
 
     def html
@@ -18,34 +25,6 @@ class LOC < Line
         typed = [[2, 0], [2, 3]]
         mssge = [[2, 1], [2, 2]]
         super(codes, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (3227) Location function code qualifier
-        unless @function == nil
-            rows << coded_row("3227", "Location function code qualifier", 
-                @function)
-        end
-        # (3225) Place/location identification
-        unless @identification == nil
-            rows << ["3225", "Place/location identification", @identification]
-        end
-        # (1131) Location code list qualifier
-        unless @code_list == nil
-            rows << coded_row("1131", "Location code list qualifier", 
-                @code_list)
-        end
-        # (3055) Code list responsible agency, coded
-        unless @agency == nil
-            rows << coded_row("3055", "Code list responsible agency", 
-                @agency)
-        end
-        # (3244) Place/location
-        unless @location == nil
-            rows << ["3244", "Place/location", @location]
-        end
-        return rows
     end
 
     def debug

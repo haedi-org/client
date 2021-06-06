@@ -6,8 +6,7 @@ class Structure
         @rules = rules
         @with_subgroups = with_subgroups
         @group_count = rules.length
-        # Calculate group data and split into subgroups
-        @data = groups()
+        @data, errors = groups()
         @data = split_duplicates(@data) if with_subgroups
     end
 
@@ -56,7 +55,7 @@ class Structure
     end
 
     def groups()
-        lines_dup, data = @document.lines.dup, {}
+        lines_dup, data, errors = @document.lines.dup, {}, []
         # Remove document tags (UNA, UNH, ...)
         until @rules["0"].include?(lines_dup.first.tag.value)
             lines_dup = lines_dup[1..-1]
@@ -79,7 +78,7 @@ class Structure
             end
         end
         #data.each { |a, b| b.each { |line| puts line.raw }}
-        return data
+        return data, errors
     end
 
     def segment_in_group?(group, segment)

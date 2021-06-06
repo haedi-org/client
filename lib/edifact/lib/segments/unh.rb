@@ -7,15 +7,23 @@ class UNH < Line
 
     def initialize(data, version, chars)
         super(data, version, chars)
-        @message_version    = format_version # 0052
+        @message_version = format_version # 0052
         # (0062) Message reference number
-        @message_reference  = val(1, 0)
+        @message_reference = define([1, 0], "0062", "Message reference number")
         # (0065) Message type
-        @message_type       = ref("0065", val(2, 0), @message_version.ref)
+        @message_type = define([2, 0], "0065", "Message type", true, 
+            @message_version.ref)
         # (0051) Controlling agency, coded
-        @controlling_agency = ref("0051", val(2, 3), @message_version.ref)
+        @controlling_agency = define([2, 3], "0051", "Controlling agency", true, 
+            @message_version.ref)
         # (0057) Association assigned code
-        @association_code   = ref("0057", val(2, 4), @message_version.ref)
+        @association_code = define([2, 4], "0057", "Association assigned code", 
+            true, @message_version.ref)
+        # Push to elements
+        push_elements([
+            @message_version, @message_type, @controlling_agency, 
+            @association_code
+        ])
     end
 
     def html
@@ -37,37 +45,6 @@ class UNH < Line
             @message_version_number +
             @message_release_number
         )
-    end
-
-    def table
-        rows = [header_row]
-        # (0052) Message version number
-        unless @message_reference == nil
-            rows << ["0052", "Message version number", @message_version_number]
-        end
-        # (0054) Message release number
-        unless @message_reference == nil
-            rows << ["0054", "Message release number", @message_release_number]
-        end
-        # (0062) Message reference number
-        unless @message_reference == nil
-            rows << ["0062", "Message reference number", @message_reference]
-        end
-        # (0065) Message type
-        unless @message_type == nil
-            rows << coded_row("0065", "Message type", @message_type)
-        end
-        # (0051) Controlling agency, coded
-        unless @controlling_agency == nil
-            rows << coded_row("0051", "Controlling agency", @controlling_agency)
-        end
-        # (0057) Association assigned code
-        unless @association_code == nil
-            rows << coded_row("0057", "Association assigned code", 
-                @association_code
-            )
-        end
-        return rows
     end
 
     def debug

@@ -2,15 +2,21 @@ class PIA < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (4347) Product id. function qualifier
-        @product_identifier = val(1, 0, "4347")
+        @product_identifier = define([1, 0], "4347", 
+            "Product id. function qualifier", true)
         # (7140) Item number
-        @item_number        = val(2, 0)
+        @item_number = define([2, 0], "7140", "Item number")
         # (7143) Item number type, coded
-        @item_number_type   = val(2, 1, "7143")
-        # (1131) Code list qualifier 
-        @code_list          = val(2, 2, "1131")
+        @item_number_type = define([2, 1], "7143", "", true)
+        # (1131) Code list qualifier
+        @code_list = define([2, 2], "1131", "Code list qualifier", true)
         # (3055) Code list responsible agency, coded
-        @agency             = val(2, 3, "3055")
+        @agency = define([2, 3], "3055", "Code list responsible agency", true)
+        # Push to elements
+        push_elements([
+            @product_identifier, @item_number, @item_number_type, @code_list,
+            @agency
+        ])
     end
 
     def html
@@ -18,32 +24,6 @@ class PIA < Line
         typed = [[2, 0]]
         mssge = [[2, 2], [2, 3]]
         super(coded, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (4347) Product id. function qualifier
-        unless @product_identifier == nil
-            rows << coded_row("4347", "Product id. function qualifier", 
-                @product_identifier)
-        end
-        # (7140) Item number
-        unless @item_number == nil
-            rows << ["7140", "Item number", @item_number]
-        end
-        # (7143) Item number type, coded
-        unless @item_number_type == nil
-            rows << coded_row("7143", "Item number type", @item_number_type)
-        end
-        # (1131) Code list qualifier 
-        unless @code_list == nil
-            rows << coded_row("1131", "Code list qualifier ", @code_list)
-        end
-        # (3055) Code list responsible agency, coded
-        unless @agency == nil
-            rows << coded_row("3055", "Code list responsible agency", @agency)
-        end
-        return rows
     end
 
     def debug

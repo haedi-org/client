@@ -2,75 +2,40 @@ class INV < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (4501) Inventory movement direction, coded
-        @movement_direction = val(1, 0, "4501")
+        @movement_direction = define([1, 0], "4501", 
+            "Inventory movement direction", true)
         # (7491) Type of inventory affected, coded
-        @inventory_type = val(2, 0, "7491")
+        @inventory_type = define([2, 0], "7491", "Type of inventory affected", 
+            true)
         # (4499) Reason for inventory movement, coded
-        @movement_reason = val(3, 0, "4499")
+        @movement_reason = define([3, 0], "4499", 
+            "Reason for inventory movement", true)
         # (4503) Inventory balance method, coded
-        @balance_method = val(4, 0, "4503")
+        @balance_method = define([4, 0], "4503", "Inventory balance method", 
+            true)
         # (4403) Instruction qualifier
-        @instruction_qualifier = val(5, 0, "4403")
+        @instruction_qualifier = define([5, 0], "4403", "Instruction qualifier", 
+            true)
         # (4401) Instruction, coded
-        @instruction_coded = val(5, 1, "4401")
+        @instruction_coded = define([5, 1], "4401", "Coded instruction", true)
         # (1131) Code list qualifier
-        @code_list = val(5, 2, "1131")
+        @code_list = define([5, 2], "1131", "Code list qualifier", true)
         # (3055) Code list responsible agency, coded
-        @agency = val(5, 3, "3055")
+        @agency = define([5, 3], "3055", "Code list responsible agency", true)
         # (4400) Instruction
-        @instruction = val(5, 4)
+        @instruction = define([5, 4], "4400" "Instruction")
+        # Push to elements
+        push_elements([
+            @movement_direction, @inventory_type, @movement_reason, 
+            @balance_method, @instruction_qualifier, @instruction_coded,
+            @code_list, @agency, @instruction
+        ])
     end
 
     def html
         coded = [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [5, 1]]
         typed = [[5, 4]]
         super(coded, typed)
-    end
-
-    def table
-        rows = [header_row]
-        # (4501) Inventory movement direction, coded
-        unless @movement_direction == nil
-            rows << coded_row("4501", "Inventory movement direction", 
-                @movement_direction)
-        end
-        # (7491) Type of inventory affected, coded
-        unless @inventory_type == nil
-            rows << coded_row("7491", "Type of inventory affected", 
-                @inventory_type)
-        end
-        # (4499) Reason for inventory movement, coded
-        unless @movement_reason == nil
-            rows << coded_row("4499", "Reason for inventory movement", 
-                @movement_reason)
-        end
-        # (4503) Inventory balance method, coded
-        unless @balance_method == nil
-            rows << coded_row("4503", "Inventory balance method", 
-                @balance_method)
-        end
-        # (4403) Instruction qualifier
-        unless @instruction_qualifier == nil
-            rows << coded_row("4403", "Instruction qualifier", 
-                @instruction_qualifier)
-        end
-        # (4401) Instruction, coded
-        unless @instruction_coded == nil
-            rows << coded_row("4401", "Instruction", @instruction_coded)
-        end
-        # (1131) Code list qualifier
-        unless @code_list == nil
-            rows << coded_row("1131", "Code list qualifier", @code_list)
-        end
-        # (3055) Code list responsible agency, coded
-        unless @agency == nil
-            rows << coded_row("3055", "Code list responsible agency", @agency)
-        end
-        # (4400) Instruction
-        unless @instruction == nil
-            rows << ["4400", "Instruction", @instruction]
-        end
-        return rows
     end
 
     def debug

@@ -12,7 +12,6 @@ if ARGV.length == 0
 else
     paths = ARGV.map { |param| File.file?(param) ? param : nil }.compact
     return if paths.empty?
-
     for path in paths do
         begin
             # Read lines from path

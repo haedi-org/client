@@ -2,29 +2,23 @@ class GIN < Line
     def initialize(data, version, reference)
         super(data, version, reference)
         # (7405) Identity number qualifier
-        @identity_qualifier = val(1, 0, "7405")
+        @identity_qualifier = define([1, 0], "7405", 
+            "Identify number qualifier", true)
         # (7402) Identity number
-        @identity_range     = [val(2, 0), val(2, 1)].compact
+        @identity_range = [
+            define([2, 0], "7402", "Identity number"),
+            define([2, 1], "7402", "Identity number")
+        ]
+        # Push to elements
+        push_elements([
+            @identity_qualifier, @identity_range
+        ].flatten)
     end
 
     def html
         coded = [[1, 0]]
         typed = [[2, 0], [2, 1]]
         super(coded, typed)
-    end
-
-    def table
-        rows = [header_row]
-        # (7405) Identity number qualifier
-        unless @identity_qualifier == nil
-            rows << coded_row("7405", "Identity number qualifier", 
-                @identity_qualifier)
-        end
-        # (7402) Identity number
-        unless @identity_range == nil
-            rows << ["7402", "Identity number(s)", @identity_range.join("-")]
-        end
-        return rows
     end
 
     def debug

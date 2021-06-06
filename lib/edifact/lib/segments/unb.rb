@@ -5,49 +5,75 @@ class UNB < Line
     def initialize(data, version, chars)
         super(data, version, chars)
         # (0001) Syntax identifier
-        @syntax_identifier = val(1, 0, "0001")
+        @syntax_identifier = define([1, 0], "0001", "Syntax identifier", true)
         # (0002) Syntax version number
-        @syntax_version = val(1, 1, "0002")
+        @syntax_version = define([1, 1], "0002", "Syntax version number", true)
         # (0080) Service code list directory version number
-        @code_list_version = val(1, 2)
+        @code_list_version = define([1, 2], "0080", 
+            "Service code list directory version number")
         # (0133) Character encoding, coded
-        @character_encoding = val(1, 3, "0133")
+        @character_encoding = define([1, 3], "0133", "Character encoding", true)
         # (0004) Interchange sender identification
-        @sender_id = val(2, 0)
+        @sender_id = define([2, 0], "0004", "Interchange sender identification")
         # (0007) Identification code qualifier
-        @sender_id_qualifier = val(2, 1, "0007")
+        @sender_id_qualifier = define([2, 1], "0007", 
+            "Identification code qualifier", true)
         # (0008) Interchange sender internal identification
-        @sender_internal_id = val(2, 2)
+        @sender_internal_id = define([2, 2], "0008", 
+            "Interchange sender internal identification")
         # (0042) Interchange sender internal sub-identification
-        @sender_internal_sub_id = val(2, 3)
+        @sender_internal_sub_id = define([2, 3], "0042", 
+            "Interchange sender internal sub-identification")
         # (0010) Interchange recipient identification
-        @recipient_id = val(3, 0)
+        @recipient_id = define([3, 0], "0010", 
+            "Interchange recipient identification")
         # (0007) Identification code qualifier
-        @recipient_id_qualifier = val(3, 1, "0007")
+        @recipient_id_qualifier = define([3, 1], "0007", 
+            "Identification code qualifier", true)
         # (0014) Interchange recipient internal identification
-        @recipient_internal_id = val(3, 2)
+        @recipient_internal_id = define([3, 2], "0014", 
+            "Interchange recipient internal identification")
         # (0046) Interchange recipient internal sub-identification
-        @recipient_internal_sub_id = val(3, 3)
+        @recipient_internal_sub_id = define([3, 3], "0046", 
+            "Interchange recipient internal sub-identification")
         # (0017) Date of preparation - YYMMDD (101)
-        @preparation_date = val(4, 0)
+        @preparation_date = define([4, 0], "0017", "Date of preparation")
         # (0019) Time of preparation - HHMM (401)
-        @preparation_time = val(4, 1)
+        @preparation_time = define([4, 1], "0019", "Time of preparation")
         # (0020) Interchange control reference
-        @control_reference = val(4, 2)
+        @control_reference = define([4, 2], "0020", 
+            "Interchange control reference")
         # (0022) Recipient reference/password
-        @recipient_reference = val(5, 0)
+        @recipient_reference = define([5, 0], "0022", 
+            "Recipient reference/password")
         # (0025) Recipient reference/password qualifier
-        @recipient_reference_qualifier = val(5, 1, "0025")
+        @recipient_reference_qualifier = define([5, 1], "0025", 
+            "Recipient reference/password qualifier", true)
         # (0026) Application reference
-        @application_reference = val(5, 2)
+        @application_reference = define([5, 2], "0026", "Application reference")
         # (0029) Processing priority code
-        @priority_code = val(5, 3, "0029")
+        @priority_code = define([5, 3], "0029", "Processing priority code", 
+            true)
         # (0031) Acknowledgement request
-        @acknowledgement_request = val(5, 4, "0031")
+        @acknowledgement_request = define([5, 4], "0031", 
+            "Acknowledgement request", true)
         # (0032) Interchange agreement identifier
-        @agreement_identifier = val(5, 5)
+        @agreement_identifier = define([5, 5], "0032", 
+            "Interchange agreement identifier")
         # (0035) Test indicator
-        @test_indicator = val(5, 6, "0035")
+        @test_indicator = define([5, 6], "0035", "Test indicator", true)
+        # Push to elements
+        push_elements([
+            @syntax_identifier, @syntax_version, @code_list_version, 
+            @character_encoding, @sender_id, @sender_id_qualifier, 
+            @sender_internal_id, @sender_internal_sub_id, @recipient_id, 
+            @recipient_id_qualifier, @recipient_internal_id, 
+            @recipient_internal_sub_id, @preparation_date, @preparation_time, 
+            @control_reference, @recipient_reference, 
+            @recipient_reference_qualifier, @application_reference, 
+            @priority_code, @acknowledgement_request, @agreement_identifier, 
+            @test_indicator
+        ])
     end
 
     def date
@@ -69,115 +95,6 @@ class UNB < Line
         typed = [[2, 0], [2, 2], [2, 3], [3, 0], [3, 2], [3, 3], [4, 2], [5, 0]]
         mssge = [[1, 0], [1, 1], [1, 3], [4, 0], [4, 1]]
         super(coded, typed, mssge)
-    end
-
-    def table
-        rows = [header_row]
-        # (0001) Syntax identifier
-        unless @syntax_identifier == nil
-            rows << coded_row("0001", "Syntax identifier", @syntax_identifier)
-        end
-        # (0002) Syntax version number
-        unless @syntax_version == nil
-            rows << coded_row("0002", "Syntax version number", @syntax_version)
-        end
-        # (0080) Service code list directory version number
-        unless @code_list_version == nil
-            rows << ["0080", "Service code list directory version number", 
-                @code_list_version]
-        end
-        # (0133) Character encoding, coded
-        unless @character_encoding == nil
-            rows << coded_row("0133", "Character encoding",
-                @character_encoding)
-        end
-        # (0004) Interchange sender identification
-        unless @sender_id == nil
-            rows << ["0004", "Interchange sender identification", @sender_id]
-        end
-        # (0007) Identification code qualifier
-        unless @sender_id_qualifier == nil
-            rows << coded_row("0007", "Sender identification code qualifier", 
-                @sender_id_qualifier)
-        end
-        # (0008) Interchange sender internal identification
-        unless @sender_internal_id == nil
-            rows << ["0008", "Interchange sender internal identification", 
-                @sender_internal_id]
-        end
-        # (0042) Interchange sender internal sub-identification
-        unless @sender_internal_sub_id == nil
-            rows << ["0042", "Interchange sender internal sub-identification", 
-                @sender_internal_sub_id]
-        end
-        # (0010) Interchange recipient identification
-        unless @recipient_id == nil
-            rows << ["0010", "Interchange recipient identification", 
-                @recipient_id]
-        end
-        # (0007) Identification code qualifier
-        unless @recipient_id_qualifier == nil
-            rows << coded_row("0007", "Recipient identification code qualifier", 
-                @recipient_id_qualifier)
-        end
-        # (0014) Interchange recipient internal identification
-        unless @recipient_internal_id == nil
-            rows << ["0014", "Interchange recipient internal identification", 
-                @recipient_internal_id]
-        end
-        # (0046) Interchange recipient internal sub-identification
-        unless @recipient_internal_sub_id == nil
-            rows << ["0046", 
-                "Interchange recipient internal sub-identification", 
-                @recipient_internal_sub_id]
-        end
-        # (0017) Date of preperation - YYMMDD (101)
-        unless @preparation_date == nil
-            rows << ["0017", "Date", @preparation_date, date]
-        end
-        # (0019) Time of preperation - HHMM (401)
-        unless @preparation_time == nil
-            rows << ["0019", "Time", @preparation_time, time]
-        end
-        # (0020) Interchange control reference
-        unless @control_reference == nil
-            rows << ["0020", "Interchange control reference",
-                @control_reference]
-        end
-        # (0022) Recipient reference/password
-        unless @recipient_reference == nil
-            rows << ["0022", "Recipient reference/password", 
-                @recipient_reference]
-        end
-        # (0025) Recipient reference/password qualifier
-        unless @recipient_reference_qualifier == nil
-            rows << coded_row("0025", "Recipient reference/password qualifier", 
-                @recipient_reference_qualifier)
-        end
-        # (0026) Application reference
-        unless @application_reference == nil
-            rows << ["0026", "Application reference", @application_reference]
-        end
-        # (0029) Processing priority code
-        unless @priority_code == nil
-            rows << coded_row("0029", "Processing priority code", 
-                @priority_code)
-        end
-        # (0031) Acknowledgement request
-        unless @acknowledgement_request == nil
-            rows << coded_row("0031", "Acknowledgement request", 
-                @acknowledgement_request)
-        end
-        # (0032) Interchange agreement identifier
-        unless @agreement_identifier == nil
-            rows << ["0032", "Interchange agreement identifier", 
-                @agreement_identifier]
-        end
-        # (0035) Test indicator
-        unless @test_indicator == nil
-            rows << coded_row("0035", "Test indicator", @test_indicator)
-        end
-        return rows
     end
 
     def debug

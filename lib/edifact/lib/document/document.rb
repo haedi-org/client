@@ -49,15 +49,6 @@ class Document
         end
     end
 
-    def structure
-        puts @message.value
-        puts @version.ref
-        data = lookup_structure(@message.value, @version.ref)
-        unless data == {}
-            Structure.new(self, data).debug
-        end
-    end
-
     def assign_values
         # Get punctuation values from UNA line
         una = lines[0, 3] == 'UNA' ? lines[0, 9] : nil
@@ -84,6 +75,13 @@ class Document
         end
     end
 
+    def structure
+        data = lookup_structure(@message.value, @version.ref)
+        unless data == {}
+            Structure.new(self, data).debug
+        end
+    end
+    
     def debug
         @lines.each do |line|
             line.debug
