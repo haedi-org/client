@@ -108,7 +108,9 @@ def unit_test(tests = TESTS)
         passed += 1 unless is_failure
         # Print scenario
         color = is_failure ? :red : :green
-        puts "Scenario #{(index += 1).to_s.rjust(2, "0")}. [#{File.basename(path)}] \"#{scenario}\"".colorize(color)
+        title = "Scenario #{(index += 1).to_s.rjust(2, "0")}. [#{File.basename(path)}]"
+        title += " \"#{scenario}\"" unless scenario == nil or scenario == ""
+        puts title.colorize(color)
         # Print report
         for desc, actual, output in report do
             symbol = actual ? "✓".colorize(:green) : "✗".colorize(:red)
@@ -117,11 +119,48 @@ def unit_test(tests = TESTS)
         end
         puts ""
     end
-    puts "Completed #{TESTS.length} scenario(s)."
-    puts "#{passed} passed; #{TESTS.length-passed} failed.", "\n"
+    puts "Completed #{tests.length} scenario(s)."
+    puts "#{passed} passed; #{tests.length-passed} failed.", "\n"
 end
 
+#<div class="notification is-success"></div>
 def html_unit_test(tests = TESTS)
+    def valid_report?(report)
+        actual = true
+        report.each { |r| actual = false if r[1] == false }
+        return actual
+    end
+    require 'colorize'
+    index = 0
+    passed = 0
+    documents = strip_csv_column(EDIFACT_DOCUMENTS_PATH, 1)
+    segments = strip_csv_column(EDIFACT_SEGMENTS_PATH, 0)
+    for scenario, path, expected in tests do
+        report = []
+        # Read lines from path
+        data = read_document(path)
+        # Segment terminator test
+        report << ["segment terminator test"] + segment_terminator_test(data.dup)
+        # Only continue tests if segment terminator is valid
+        if valid_report?(report)
+            report << ["document name test"] + document_name_test(data.dup, documents)
+            report << ["document segment test"] + document_segment_test(data.dup, segments)
+            report << ["document envelope test"] + document_envelope_test(data.dup)
+        end
+        # Completed tests
+        actual = valid_report?(report)
+        # Print report
+        for desc, actual, output in report do
+            style = actual ? "is-success" : "is-danger"
+            output = (output.empty? ? desc : output.join(", "))
+            icon_type = actual ? "fas fa-check-circle" : "fas fa-times-circle"
+            icon = "<i class=\"#{icon_type}\" style=\"padding-right: 8px\"></i>"
+            puts "<div class=\"notification p-2 m-0 #{style}\">#{icon}#{output}</div>"
+        end
+    end
+end
+
+def website_unit_test(tests = TESTS)
     def valid_report?(report)
         actual = true
         report.each { |r| actual = false if r[1] == false }
@@ -161,8 +200,8 @@ def html_unit_test(tests = TESTS)
         end
         puts ""
     end
-    puts "Completed #{TESTS.length} scenario(s)."
-    puts "#{passed} passed; #{TESTS.length-passed} failed.", "\n"
+    puts "Completed #{tests.length} scenario(s)."
+    puts "#{passed} passed; #{tests.length-passed} failed.", "\n"
 end
 
 

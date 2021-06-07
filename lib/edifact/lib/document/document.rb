@@ -15,6 +15,7 @@ class Document
                 when "UNA"; UNA.new(*params)
                 when "UNH"; UNH.new(*params)
                 when "UNB"; UNB.new(*params)
+                when "UNS"; UNS.new(*params)
                 when "UNT"; UNT.new(*params)
                 when "UNZ"; UNZ.new(*params)
                 when "BGM"; BGM.new(*params)
@@ -54,8 +55,12 @@ class Document
         una = lines[0, 3] == 'UNA' ? lines[0, 9] : nil
         @chars = format_punctuation(una)
         # Split by segment terminator
-        terminator = @chars.segment_terminator
-        @lines = @lines.split(terminator).map { |line| line + terminator}
+        te = @chars.segment_terminator
+        re = @chars.release_character
+        @lines = @lines.split_with_release(te, re).map { |line| line + te }
+        # Fix UNA segment
+        @lines[0] = una if @lines[0][0, 3] == "UNA"
+        # Save unedited lines
         @raw = @lines.dup
         # Get document information
         @lines.each do |line|

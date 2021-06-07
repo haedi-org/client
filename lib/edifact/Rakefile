@@ -7,6 +7,11 @@ task :build do
     puts `ocra main.rb --output main.exe --gemfile Gemfile --gem-minimal`
 end
 
+task :example do
+    puts `ruby main.rb --refs ./samples/DESADV_D01B_ecosio.edi`
+end
+
 task :test do
-    puts `ruby main.rb`
+    paths = ARGV.map { |arg| File.file?(arg) ? arg : nil }.compact
+    puts `ruby main.rb --test #{paths.join(" ")}`
 end
