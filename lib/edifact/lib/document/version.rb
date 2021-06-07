@@ -1,5 +1,7 @@
 Version = Struct.new(
     :number,
     :release,
-    :ref
+    :ref,
+    :code,
+    :title
 )

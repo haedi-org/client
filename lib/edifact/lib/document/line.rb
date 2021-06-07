@@ -21,9 +21,10 @@ class Line
         end
     end
 
-    def define(loc, code, title, coded = false, version = @version.ref)
+    def define(loc, code, title, coded = false, version = nil)
         value = val(*loc)
         return nil if (value == nil) or (value == "")
+        version = @version.ref if version == nil && coded
         data = coded ? ref(code, value, version) : nil
         desc, ref = data == nil ? ["", ""] : [data.desc, data.ref]
         return Element.new(
@@ -32,9 +33,9 @@ class Line
     end
 
     def val(a, b = nil, code = nil, version = nil)
-        version = @version.ref if version == nil
         return nil unless (len() > a) && (b == nil || len(a) > b)
         return @data[a] if b == nil
+        version = @version.ref if version == nil && code != nil
         return code == nil ? @data[a][b] : ref(code, val(a, b, version))
     end
 
@@ -101,9 +102,15 @@ class Line
     def table
         rows = [header_row]
         @elements.each do |e|
-            rows << [
-                e.code, e.title, e.value, e.ref, e.desc
-            ]
+            if e.is_a?(Element)
+                rows << [
+                    e.code, e.title, e.value, e.ref, e.desc
+                ]
+            elsif e.is_a?(Version)
+                rows << [
+                    e.code, e.title, e.ref, e.ref, ""
+                ]
+            end
         end
         return rows
     end

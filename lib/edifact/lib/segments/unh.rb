@@ -7,7 +7,8 @@ class UNH < Line
 
     def initialize(data, version, chars)
         super(data, version, chars)
-        @message_version = format_version # 0052
+        # (0052) Message version number
+        @message_version = format_version
         # (0062) Message reference number
         @message_reference = define([1, 0], "0062", "Message reference number")
         # (0065) Message type
@@ -43,7 +44,9 @@ class UNH < Line
             @message_version_number, 
             @message_release_number, 
             @message_version_number +
-            @message_release_number
+            @message_release_number,
+            "0052\n0054",
+            "Message version number\nMessage release number"
         )
     end
 

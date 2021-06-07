@@ -24,10 +24,10 @@ def segment_to_html_table(line)
     puts "<table class='#{table_class}' style='#{table_style}'>"
     puts "<colgroup>"
     puts "<col style='width: 64px; max-width: 64px'>"    # Code
-    puts "<col style='width: 160px; max-width: 160px'>"  # Title
-    puts "<col style='width: 160px; max-width: 120px'>"  # Value
+    puts "<col style='width: 200px; max-width: 200px'>"  # Title
+    puts "<col style='width: 160px; max-width: 160px'>"  # Value
     unless cols == 4
-        puts "<col style='width: 25%; max-width: 25%'>"  # Reference
+        puts "<col style='width: 20%; max-width: 20%'>"  # Reference
     end
     puts "<col>"                                         # Description
     puts "</colgroup><thead>"
