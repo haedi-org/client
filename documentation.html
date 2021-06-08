@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="node_modules/bulma-timeline/dist/css/bulma-timeline.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/scrollbar.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/fonts.css"/>
-    <script defer src="./lib/stdout.js"></script>
-    <script defer src="./lib/string.js"></script>
-    <script defer src="./lib/edifact.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
     <script defer src="./lib/titlebar.js"></script>
     <script defer src="./lib/browser.js"></script>
+    <script defer src="./lib/documentation.js"></script>
 </head>
 
 <body>
@@ -29,7 +27,7 @@
                     References
                 </p>
                 <ul class="menu-list">
-                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a>Documentation</a></li>
                     <li><a>Third-party agencies</a></li>
                     <li><a>Self defined</a></li>
                 </ul>
@@ -61,43 +59,51 @@
         <div class="column border p-0 m-0">
             <div class="column-header">
             </div>
-            <div id="path-container" class="column-tabs">
-                <nav class="level" style="width: 100%">
-                    <div class="level-left" style="width: 80%">
-                        <div class="level-item" style="width: 100%">
-                            <div class="control has-icons-left" style="width: 100%">
-                                <input id="path-input" class="input" type="path" placeholder="C:\path\to\file">
-                                <span class="icon is-left">
-                                    <i class="fas fa-file"></i>
-                                </span>
-                            </div>
-                        </div>
+            <div id="stdout" class="container p-4">
+                <article class="panel is-info block">
+                    <p class="panel-heading">
+                        Documentation
+                    </p>
+                    <p class="panel-tabs">
+                        <a class="is-active">All</a>
+                        <a>Public</a>
+                        <a>Private</a>
+                        <a>Sources</a>
+                        <a>Forks</a>
+                    </p>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                            <input class="input is-info" type="text" placeholder="Search">
+                            <span class="icon is-left">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                        </p>
                     </div>
-                    <div class="level-right" style="width: 20%">
-                        <div class="level-item">
-                            <button class="button is-small" onclick="set_edi_path()">Upload</button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="column-tabs">
-                <div class="tabs is-centered" style="width: 100%">
-                    <ul>
-                        <li id="rawBtn" class="is-active"><a>Raw</a></li>
-                        <li id="diagnosticsBtn"><a>Diagnostics</a></li>
-                        <li id="previewBtn"><a>Preview</a></li>
-                        <li id="timelineBtn"><a>Timeline</a></li>
-                        <li id="testBtn"><a>Integrity</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="waiting" class="block" style="display: none">
-                <div class="waiting">
-                    <progress class="progress is-link" max="100"></progress>
-                </div>
-            </div>
-            <div id="stdout" class="container" style="display: none; min-width: 100%">
-                
+                    <a class="panel-block is-active">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        bulma
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        marksheet
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        minireset.css
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        jgthms.github.io
+                    </a>
+                </article>
             </div>
         </div>
         <div class="column pl-0 py-0" style="max-width: 200px">
