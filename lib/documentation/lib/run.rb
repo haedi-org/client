@@ -1,4 +1,4 @@
-START_HTML = "<article class=\"panel is-info block\">"
+START_HTML = "<article class=\"is-info block\">"
 SEARCH_HTML = "<div class=\"panel-block\"><p class=\"control has-icons-left\"><input class=\"input is-info\" type=\"text\" placeholder=\"Search\"><span class=\"icon is-left\"><i class=\"fas fa-search\" aria-hidden=\"true\"></i></span></p></div>"
 START_BUTTONS_HTML = "<p class=\"panel-tabs\">"
 ACTIVE_CLASS = " class=\"is-active\""
@@ -23,7 +23,7 @@ def html_list(tag)
     # Start
     html << START_HTML
     # Header
-    html << html_header("Documentation")
+    # html << html_header("Documentation")
     # Buttons
     html << START_BUTTONS_HTML
     html << html_nav_button("allBtn"    , "All"    , tag == "all"     ? ACTIVE_CLASS : "")
