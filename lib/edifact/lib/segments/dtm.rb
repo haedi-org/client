@@ -31,6 +31,6 @@ class DTM < Line
     end
 
     def interpret
-        return interpret_date(@date, @format.value)
+        return interpret_date(@date.value, @format.value)
     end
 end

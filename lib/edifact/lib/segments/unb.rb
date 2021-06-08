@@ -78,16 +78,16 @@ class UNB < Line
 
     def date
         return nil if @preparation_date == nil
-        return case @preparation_date.length
-            when 6; interpret_date(@preparation_date, "101")
-            when 8; interpret_date(@preparation_date, "102")
+        return case @preparation_date.value.length
+            when 6; interpret_date(@preparation_date.value, "101")
+            when 8; interpret_date(@preparation_date.value, "102")
             else; @preparation_date
         end
     end
 
     def time
         return nil if @preparation_time == nil
-        return interpret_date(@preparation_time, "401")
+        return interpret_date(@preparation_time.value, "401")
     end
 
     def html
