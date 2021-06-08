@@ -1,0 +1,7 @@
+task :default do
+    puts "build\tbuild executable using ocra"
+end
+
+task :build do
+    puts `ocra main.rb --output main.exe --gemfile Gemfile --gem-minimal`
+end
