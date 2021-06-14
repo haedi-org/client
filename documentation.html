@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="./css/scrollbar.css" />
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
     <script defer src="./lib/titlebar.js"></script>
+    <script defer src="./lib/string.js"></script>
     <script defer src="./lib/browser.js"></script>
+    <script defer src="./lib/stdout.js"></script>
     <script defer src="./lib/documentation.js"></script>
 </head>
 
@@ -27,7 +29,7 @@
                     References
                 </p>
                 <ul class="menu-list">
-                    <li><a>Documentation</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
                     <li><a>Third-party agencies</a></li>
                     <li><a>Self defined</a></li>
                 </ul>
@@ -35,7 +37,7 @@
                     Tools
                 </p>
                 <ul class="menu-list">
-                    <li><a>Message validation</a></li>
+                    <li><a href="index.html">Message inspect</a></li>
                     <li><a>Configure pipelines</a></li>
                     <li><a>Export as</a></li>
                 </ul>
@@ -59,17 +61,20 @@
         <div class="column border p-0 m-0">
             <div class="column-header">
             </div>
-            <div id="stdout" class="container p-4">
-                <article class="panel is-info block">
-                    <p class="panel-heading">
+            <div id="waiting" class="block" style="display: none">
+                <div class="waiting">
+                    <progress class="progress is-link" max="100"></progress>
+                </div>
+            </div>
+            <div id="stdout" class="container">
+                <article class="is-info block">
+                    <!--<p class="panel-heading">
                         Documentation
-                    </p>
+                    </p>-->
                     <p class="panel-tabs">
-                        <a class="is-active">All</a>
-                        <a>Public</a>
-                        <a>Private</a>
-                        <a>Sources</a>
-                        <a>Forks</a>
+                        <a id="allBtn" class="is-active">All</a>
+                        <a id="publicBtn">Public</a>
+                        <a id="privateBtn">Private</a>
                     </p>
                     <div class="panel-block">
                         <p class="control has-icons-left">
@@ -79,30 +84,6 @@
                             </span>
                         </p>
                     </div>
-                    <a class="panel-block is-active">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        bulma
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        marksheet
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        minireset.css
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        jgthms.github.io
-                    </a>
                 </article>
             </div>
         </div>

@@ -79,7 +79,7 @@ img#logo {
     margin-left: 16px;
 }
 
-div#stdout {
+div.stdout {
     display: block;
     font-family: "Roboto Mono", monospace;
     font-size: 0.8em;

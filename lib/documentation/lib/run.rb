@@ -33,6 +33,7 @@ def html_list(tag)
     # Search
     html << SEARCH_HTML
     # List items
+    html << html_list_item("Test")
     html << html_list_item("Test item")
     # End
     html << END_HTML

@@ -10,6 +10,8 @@ def interpret_date(d, f)
         "#{d[4,2]}/#{d[2,2]}/20#{d[0,2]}"
     when "102" # CCYYMMDD
         "#{d[6,2]}/#{d[4,2]}/#{d[0,4]}"
+    when "203" # CCYYMMDDHHMM
+        "#{d[6,2]}/#{d[4,2]}/#{d[0,4]} #{d[8,2]}:#{d[10,2]}"
     when "204" # CCYYMMDDHHMMSS
         "#{d[6,2]}/#{d[4,2]}/#{d[0,4]} #{d[8,2]}:#{d[10,2]}:#{d[12,2]}"
     when "401" # HHMM
