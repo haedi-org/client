@@ -7,7 +7,7 @@ class PIA < Line
         # (7140) Item number
         @item_number = define([2, 0], "7140", "Item number")
         # (7143) Item number type, coded
-        @item_number_type = define([2, 1], "7143", "", true)
+        @item_number_type = define([2, 1], "7143", "Item number type", true)
         # (1131) Code list qualifier
         @code_list = define([2, 2], "1131", "Code list qualifier", true)
         # (3055) Code list responsible agency, coded

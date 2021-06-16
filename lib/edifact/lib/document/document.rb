@@ -43,7 +43,7 @@ class Document
                 else; Line.new(*params)
                 end
             rescue => exception
-                puts exception.inspect
+                puts exception
                 puts exception.backtrace
                 exit
             end

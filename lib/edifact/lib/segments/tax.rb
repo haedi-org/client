@@ -12,6 +12,11 @@ class TAX < Line
         ])
     end
 
+    def html
+        coded = [[1, 0], [2, 0]]
+        super(coded)
+    end
+
     def debug
         super
         @tax_function.tap { |v| puts "Function = " + v.ref if v != nil }

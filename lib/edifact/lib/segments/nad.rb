@@ -1,6 +1,10 @@
 class NAD < Line
     def initialize(data, version, chars)
         super(data, version, chars)
+        
+        # Example:
+        # NAD+BY+++Customer's name+High Street+Example Town++23436+xx'
+
         # (3035) Party qualifier
         @party_function = define([1, 0], "3035", "Party qualifier", true)
         # (3039) Party id. identification

@@ -11,6 +11,8 @@ class DTM < Line
         # (2379) Date/time/period format qualifier
         @format = define([1, 2], "2379", "Date/time/period format qualfier", 
             true)
+        # Set date reference
+        @date.ref = interpret_date(@date.value, @format.value)
         # Push to elements
         push_elements([
             @qualfier, @date, @format
@@ -28,9 +30,5 @@ class DTM < Line
         super
         puts "#{@qualifier.ref} = #{@date} (#{@format.ref}) #{interpret}"
         puts "\n"
-    end
-
-    def interpret
-        return interpret_date(@date.value, @format.value)
     end
 end

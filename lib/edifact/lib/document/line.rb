@@ -23,7 +23,8 @@ class Line
 
     def define(loc, code, title, coded = false, version = nil)
         value = val(*loc)
-        return nil if (value == nil) or (value == "")
+        value = value.join("\n") if value.is_a?(Array)
+        return nil if (value == nil) or (value == "") or (value == [])
         version = @version.ref if version == nil && coded
         data = coded ? ref(code, value, version) : nil
         desc, ref = data == nil ? ["", ""] : [data.desc, data.ref]
