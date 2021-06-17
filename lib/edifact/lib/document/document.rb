@@ -43,8 +43,9 @@ class Document
                 else; Line.new(*params)
                 end
             rescue => exception
-                puts exception
-                puts exception.backtrace
+                html_error(exception)
+               #puts exception
+               #puts exception.backtrace
                 exit
             end
         end

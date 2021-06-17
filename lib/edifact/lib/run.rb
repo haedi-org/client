@@ -45,8 +45,9 @@ else
                     html_unit_test(tests)
                 end
             rescue => exception
-                puts exception.inspect
-                puts exception.backtrace
+                html_error(exception)
+               #puts exception.inspect
+               #puts exception.backtrace
                 exit
             end
         end

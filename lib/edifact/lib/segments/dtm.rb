@@ -31,4 +31,8 @@ class DTM < Line
         puts "#{@qualifier.ref} = #{@date} (#{@format.ref}) #{interpret}"
         puts "\n"
     end
+
+    def interpret
+        return interpret_date(@date.value, @format.value)
+    end
 end
