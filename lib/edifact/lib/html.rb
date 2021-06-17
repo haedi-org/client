@@ -10,8 +10,10 @@ def html_table_row(params, type = "td", cols = 5, classes = "is-info is-light")
     params.each_with_index do |param, index|
         if (type == "td") && (index == 2)
             param = "<span class=\"tag #{classes}\">#{param.html_sanitize}</span>"
+            puts "<#{type} style=\"vertical-align: middle\">#{param}</#{type}>"
+        else
+            puts "<#{type} style=\"vertical-align: middle\">#{param.html_sanitize}</#{type}>"
         end
-        puts "<#{type} style=\"vertical-align: middle\">#{param.html_sanitize}</#{type}>"
     end
     puts "</tr>"
 end
