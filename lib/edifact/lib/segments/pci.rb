@@ -1,6 +1,6 @@
 class PCI < Line
-    def initialize(data, version, reference)
-        super(data, version, reference)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (4233) Marking instructions, coded
         @marking_instructions = define([1, 0], "4233", "Marking instructions", 
             true)

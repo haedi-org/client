@@ -1,6 +1,6 @@
 class LOC < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (3227) Location function code qualifier
         @function = define([1, 0], "3227", "Location function code qualifier", 
             true)

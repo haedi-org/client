@@ -1,6 +1,6 @@
 class MOA < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
 		# (5025) Monetary amount type code qualifier
         @monetary_amount_qualifier = define([1, 0], "5025", 
             "Monetary amount type code qualifier", true)

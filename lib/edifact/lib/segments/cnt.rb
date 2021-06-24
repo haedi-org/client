@@ -1,6 +1,6 @@
 class CNT < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
 		# (6069) Control qualifier
         @control_qualifier = define([1, 0], "6069", "Control qualifier", true)
 		# (6066) Control value

@@ -1,6 +1,6 @@
 class MEA < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (6311) Measurement purpose qualifier
         @purpose = define([1, 0], "6311", "Measurement purpose qualifier", true)
         # (6313) Property measured, coded

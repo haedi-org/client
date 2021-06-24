@@ -1,6 +1,6 @@
 class RFF < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (1153) Reference qualifier
         @reference = define([1, 0], "1153", "Reference qualifier", true)
         # (1154) Reference number

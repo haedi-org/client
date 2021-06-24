@@ -1,8 +1,9 @@
 class Line
     attr_reader :raw
 
-    def initialize(data, version, chars)
+    def initialize(data, line_no, version, chars)
         @raw = data
+        @line_no = line_no
         @version = version
         @chars = chars
         @data = @raw.dup
@@ -82,7 +83,10 @@ class Line
                 clr, fwt = "#F14668", "bold" if error.include?([c, d])
                 style = "color: #{clr}; font-weight: #{fwt}"
                 # Return <b> tag with CSS styling
-                "<b style='#{style}'>#{data}</b>"
+                id = "L-#{@line_no}-#{c}-#{d}"
+                mouseover = "onmouseover='highlightElement(\"#{id}\")'"
+                mouseleave = "onmouseleave='restoreElement(\"#{id}\", \"#{clr}\")'"
+                "<b id='#{id}' class='edi-data' style='#{style}' #{mouseover} #{mouseleave}>#{data}</b>"
             }.join(@chars.component_element_seperator)
         }.join(@chars.data_element_seperator) + @chars.segment_terminator
     end

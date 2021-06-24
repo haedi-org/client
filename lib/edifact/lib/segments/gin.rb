@@ -1,6 +1,6 @@
 class GIN < Line
-    def initialize(data, version, reference)
-        super(data, version, reference)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (7405) Identity number qualifier
         @identity_qualifier = define([1, 0], "7405", 
             "Identify number qualifier", true)

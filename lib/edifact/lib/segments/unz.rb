@@ -1,6 +1,6 @@
 class UNZ < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (0036) Interchange control count
         @control_count = define([1, 0], "0036", "Interchange control count")
         # (0020) Interchange control reference

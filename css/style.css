@@ -112,3 +112,12 @@ div#path-container {
 #path-container button {
     margin-right: 4px;
 }
+
+.edi-data {
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.edi-data:hover {
+    transition-duration: 0s;
+}

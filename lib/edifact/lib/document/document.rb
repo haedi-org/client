@@ -8,38 +8,38 @@ class Document
         # Get critical values from document and reformat
         assign_values
         # Create line object dependant on tag
-        @lines.map! do |line|
+        @lines.map!.with_index do |line, line_no|
             begin
-                params = [line, @version, @chars]
+                params = [line, line_no, @version, @chars]
                 case line[0, 3]
+                when "ALI"; ALI.new(*params)
+                when "BGM"; BGM.new(*params)
+                when "CDI"; CDI.new(*params)
+                when "CNT"; CNT.new(*params)
+                when "CPS"; CPS.new(*params)
+                when "DTM"; DTM.new(*params)
+                when "FTX"; FTX.new(*params)
+                when "GIN"; GIN.new(*params)
+                when "IMD"; IMD.new(*params)
+                when "INV"; INV.new(*params)
+                when "LIN"; LIN.new(*params)
+                when "LOC"; LOC.new(*params)
+                when "MEA"; MEA.new(*params)
+                when "MOA"; MOA.new(*params)
+                when "NAD"; NAD.new(*params)
+                when "PAC"; PAC.new(*params)
+                when "PCI"; PCI.new(*params)
+                when "PIA"; PIA.new(*params)
+                when "PRI"; PRI.new(*params)
+                when "QTY"; QTY.new(*params)
+                when "RFF"; RFF.new(*params)
+                when "TAX"; TAX.new(*params)
                 when "UNA"; UNA.new(*params)
-                when "UNH"; UNH.new(*params)
                 when "UNB"; UNB.new(*params)
+                when "UNH"; UNH.new(*params)
                 when "UNS"; UNS.new(*params)
                 when "UNT"; UNT.new(*params)
                 when "UNZ"; UNZ.new(*params)
-                when "BGM"; BGM.new(*params)
-                when "ALI"; ALI.new(*params)
-                when "DTM"; DTM.new(*params)
-                when "FTX"; FTX.new(*params)
-                when "NAD"; NAD.new(*params)
-                when "RFF"; RFF.new(*params)
-                when "TAX"; TAX.new(*params)
-                when "LIN"; LIN.new(*params)
-                when "QTY"; QTY.new(*params)
-                when "IMD"; IMD.new(*params)
-                when "MEA"; MEA.new(*params)
-                when "PIA"; PIA.new(*params)
-                when "PRI"; PRI.new(*params)
-                when "GIN"; GIN.new(*params)
-                when "CPS"; CPS.new(*params)
-                when "PCI"; PCI.new(*params)
-                when "LOC"; LOC.new(*params)
-                when "INV"; INV.new(*params)
-                when "PAC"; PAC.new(*params)
-                when "CDI"; CDI.new(*params)
-                when "CNT"; CNT.new(*params)
-                when "MOA"; MOA.new(*params)
                 else; Line.new(*params)
                 end
             rescue => exception
@@ -64,9 +64,9 @@ class Document
         # Save unedited lines
         @raw = @lines.dup
         # Get document information
-        @lines.each do |line|
+        @lines.each_with_index do |line, line_no|
             if line[0, 3] == "UNH"
-                unh = UNH.new(line, @version, @chars)
+                unh = UNH.new(line, line_no, @version, @chars)
                 @version = unh.message_version
                 @message = unh.message_type
             end
@@ -75,7 +75,7 @@ class Document
 
     def format_punctuation(line = nil)
         unless line == nil
-            return UNA.new(line, @version).punctuation
+            return UNA.new(line, 0, @version).punctuation
         else
             return Punctuation.new(':', '+', '.', '?', '\'')
         end

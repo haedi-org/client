@@ -1,6 +1,6 @@
 class CPS < Line
-    def initialize(data, version, reference)
-        super(data, version, reference)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (7164) Hierarchical id. number
         @hierarchical_number = define([1, 0], "7164", "Hierarchical id. number")
         # (7166) Hierarchical parent id.

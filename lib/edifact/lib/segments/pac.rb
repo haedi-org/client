@@ -1,6 +1,6 @@
 class PAC < Line
-    def initialize(data, version, reference)
-        super(data, version, reference)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (7224) Number of packages
         @number_of_packages = define([1, 0], "7224", "Number of packages")
         # (7075) Packaging level, coded

@@ -1,6 +1,6 @@
 class BGM < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (1001) Document/message name, coded
         @coded_message_name = define([1, 0], "1001", "Document/message name", 
             true)

@@ -2,8 +2,8 @@
 # UNB+UNOC:3+O0013000089TEVES+O0013009096BIP-XPRS-AI-P+170308:2018+000000003'
 
 class UNB < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (0001) Syntax identifier
         @syntax_identifier = define([1, 0], "0001", "Syntax identifier", true)
         # (0002) Syntax version number

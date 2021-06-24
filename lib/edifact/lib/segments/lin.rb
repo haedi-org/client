@@ -1,6 +1,6 @@
 class LIN < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (1082) Line item number
         @line_item_number = define([1, 0], "1082", "Line item number")
         # (1229) Action request/notification, coded

@@ -46,8 +46,8 @@ else
                 end
             rescue => exception
                 html_error(exception)
-               #puts exception.inspect
-               #puts exception.backtrace
+                #puts exception.inspect
+                #puts exception.backtrace
                 exit
             end
         end

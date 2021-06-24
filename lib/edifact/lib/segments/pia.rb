@@ -1,6 +1,6 @@
 class PIA < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (4347) Product id. function qualifier
         @product_identifier = define([1, 0], "4347", 
             "Product id. function qualifier", true)

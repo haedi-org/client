@@ -1,6 +1,6 @@
 class INV < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (4501) Inventory movement direction, coded
         @movement_direction = define([1, 0], "4501", 
             "Inventory movement direction", true)

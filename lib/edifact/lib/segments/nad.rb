@@ -1,6 +1,6 @@
 class NAD < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         
         # Example:
         # NAD+BY+++Customer's name+High Street+Example Town++23436+xx'

@@ -1,6 +1,6 @@
 class PRI < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (5125) Price qualifier
         @price_qualifier = define([1, 0], "5125", "Price qualifier", true)
         # (5118) Price

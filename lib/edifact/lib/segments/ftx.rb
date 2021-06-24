@@ -1,6 +1,6 @@
 class FTX < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (4451) Text subject qualifier
         @text_subject = define([1, 0], "4451", "Text subject qualifier", true)
         # (4453) Text function, coded

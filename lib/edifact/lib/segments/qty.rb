@@ -1,6 +1,6 @@
 class QTY < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (6063) Quantity qualifier
         @type = define([1, 0], "6063", "Quantity qualifier", true)
         # (6060) Quantity

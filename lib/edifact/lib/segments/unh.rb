@@ -5,8 +5,8 @@ class UNH < Line
     attr_reader :controlling_agency
     attr_reader :association_code
 
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (0052) Message version number
         @message_version = format_version
         # (0062) Message reference number

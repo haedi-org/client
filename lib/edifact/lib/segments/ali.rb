@@ -1,6 +1,6 @@
 class ALI < Line
-    def initialize(data, version, reference)
-        super(data, version, reference)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (3239) Country of origin, coded
         @country = define([1, 0], "3239", "Country of origin", true)
         # (9213) Type of duty regime, coded

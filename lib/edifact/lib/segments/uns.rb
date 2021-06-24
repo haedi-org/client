@@ -1,6 +1,6 @@
 class UNS < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (0081) Section identification
         @section = define([1, 0], "0081", "Section identification", true)
         # Push to elements

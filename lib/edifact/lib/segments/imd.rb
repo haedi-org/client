@@ -1,6 +1,6 @@
 class IMD < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (7077) Item description type, coded
         @description_type = define([1, 0], "7077", "Item description type", 
             true)

@@ -1,6 +1,7 @@
 class UNA < Line
-    def initialize(data, version, chars = nil)
+    def initialize(data, line_no, version, chars = nil)
         @version = version
+        @line_no = line_no
         @raw = data
         @data = [["UNA"]]
         # (UNA1) Component data element separator

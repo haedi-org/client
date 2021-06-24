@@ -1,6 +1,6 @@
 class TAX < Line
-    def initialize(data, version, chars)
-        super(data, version, chars)
+    def initialize(data, line_no, version, chars)
+        super(data, line_no, version, chars)
         # (5283) Duty/tax/fee function qualifier
         @tax_function = define([1, 0], "5283", 
             "Duty/tax/fee function qualifier", true)
