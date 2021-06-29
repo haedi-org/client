@@ -11,19 +11,21 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <link rel="stylesheet" type="text/css" href="./css/scrollbar.css"/>
     <link rel="stylesheet" type="text/css" href="./css/fonts.css"/>
+    <script src="./node_modules/p5/lib/p5.min.js"></script>
     <script defer src="./lib/stdout.js"></script>
     <script defer src="./lib/string.js"></script>
     <script defer src="./lib/edifact.js"></script>
     <script defer src="./lib/titlebar.js"></script>
     <script defer src="./lib/dragdrop.js"></script>
     <script defer src="./lib/browser.js"></script>
+    <script defer src="./lib/atom.js"></script>
 </head>
 
 <body>
     <div class="columns is-gapless wrapper">
         <div class="column pr-0 py-0" style="max-width: 200px">
             <div class="column-header">
-                <img id="logo" src="./assets/coffee_32.png">
+                <img id="logo" src="./assets/ouros_32.png">
             </div>
             <aside class="menu is-small p-4">
                 <p class="menu-label">
@@ -92,9 +94,10 @@
                     </ul>
                 </div>
             </div>
-            <div id="waiting" class="block" style="display: none">
+            <div id="waiting" class="block" style="display: flex">
                 <div class="waiting">
-                    <progress class="progress is-link" max="100"></progress>
+                    <div id="anim" style="padding-bottom: 32px"></div>
+                    <!--<progress class="progress is-link" max="100"></progress>-->
                 </div>
             </div>
             <div id="stdout" class="container stdout" style="display: none; min-width: 100%">
