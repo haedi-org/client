@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="98.221642mm"
+   height="25.91831mm"
+   viewBox="0 0 98.221642 25.91831"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="median.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.90509668"
+     inkscape:cx="211.57961"
+     inkscape:cy="130.92524"
+     inkscape:window-width="1482"
+     inkscape:window-height="1091"
+     inkscape:window-x="314"
+     inkscape:window-y="138"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.943476,-80.850177)">
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';stroke-width:0.264583"
+       x="47.547565"
+       y="84.069603"
+       id="text2607"><tspan
+         sodipodi:role="line"
+         id="tspan2605"
+         style="stroke-width:0.264583"
+         x="47.547565"
+         y="84.069603"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.4px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';stroke-width:0.264583"
+       x="38.860676"
+       y="100.45898"
+       id="text9591"><tspan
+         sodipodi:role="line"
+         id="tspan9589"
+         style="stroke-width:0.264583"
+         x="38.860676"
+         y="100.45898">median</tspan></text>
+    <rect
+       id="rect10193"
+       width="36.145267"
+       height="3.1700001"
+       x="68.068962"
+       y="103.59849"
+       style="stroke-width:0.634504" />
+  </g>
+</svg>
