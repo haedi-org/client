@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733336 67.733331"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#23312b"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.28"
+     inkscape:cx="150"
+     inkscape:cy="67.578125"
+     inkscape:window-width="1482"
+     inkscape:window-height="1091"
+     inkscape:window-x="314"
+     inkscape:window-y="138"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.943476,-86.742977)">
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';stroke-width:0.264583"
+       x="47.547565"
+       y="84.069603"
+       id="text2607"><tspan
+         sodipodi:role="line"
+         id="tspan2605"
+         style="stroke-width:0.264583"
+         x="47.547565"
+         y="84.069603" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:66.3708px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';fill:#ffffff;stroke-width:0.691361"
+       x="40.032066"
+       y="130.09079"
+       id="text9591"><tspan
+         sodipodi:role="line"
+         id="tspan9589"
+         style="fill:#ffffff;stroke-width:0.691361"
+         x="40.032066"
+         y="130.09079">m</tspan></text>
+    <rect
+       id="rect10193"
+       width="58.833694"
+       height="8.2832842"
+       x="45.834965"
+       y="138.29439"
+       style="fill:#ffffff;stroke-width:1.30856" />
+  </g>
+</svg>
