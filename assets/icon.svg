@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="icon.svg"
+   inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +27,7 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.28"
-     inkscape:cx="150"
+     inkscape:cx="-1.171875"
      inkscape:cy="67.578125"
      inkscape:window-width="1482"
      inkscape:window-height="1091"
@@ -51,17 +54,14 @@
          style="stroke-width:0.264583"
          x="47.547565"
          y="84.069603" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:66.3708px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';fill:#ffffff;stroke-width:0.691361"
-       x="40.032066"
-       y="130.09079"
-       id="text9591"><tspan
-         sodipodi:role="line"
-         id="tspan9589"
-         style="fill:#ffffff;stroke-width:0.691361"
-         x="40.032066"
-         y="130.09079">m</tspan></text>
+    <g
+       aria-label="m"
+       id="text9591"
+       style="font-size:66.3708px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';fill:#ffffff;stroke-width:0.691361">
+      <path
+         d="m 90.208388,94.25056 c -5.641517,0 -10.420215,2.256607 -13.274159,5.907 -2.455719,-3.982247 -6.769821,-5.907 -11.946743,-5.907 -4.845068,0 -8.960058,1.725641 -11.61489,4.911439 v -4.513214 h -7.898124 v 35.442005 h 8.296349 V 112.1043 c 0,-7.0353 3.716765,-10.61932 9.225541,-10.61932 5.04418,0 7.964495,3.05305 7.964495,9.35828 v 19.24753 h 8.29635 V 112.1043 c 0,-7.0353 3.783135,-10.61932 9.225541,-10.61932 5.04418,0 7.964495,3.05305 7.964495,9.35828 v 19.24753 h 8.296347 v -20.30946 c 0,-10.685702 -5.973369,-15.53077 -14.535202,-15.53077 z"
+         id="path4427" />
+    </g>
     <rect
        id="rect10193"
        width="58.833694"
