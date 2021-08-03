@@ -91,7 +91,12 @@ div.stdout {
     white-space: pre-wrap; 
     overflow-x: scroll;
     overflow-y: scroll;
-    padding: 16px;
+}
+
+div.stdout div.scroller {
+    overflow-y: scroll;
+    min-height: calc(100vh - 180px);
+    max-height: calc(100vh - 180px);
 }
 
 div#path-container {
