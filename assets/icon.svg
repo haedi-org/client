@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="256"
-   height="256"
-   viewBox="0 0 67.733336 67.733331"
+   width="63.46558mm"
+   height="63.495728mm"
+   viewBox="0 0 63.46558 63.495728"
    version="1.1"
    id="svg5"
+   sodipodi:docname="paper_icon.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="icon.svg"
-   inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\icon.png"
+   inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\paper_logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -18,56 +18,100 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#23312b"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:document-units="px"
+     inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.28"
-     inkscape:cx="-1.171875"
-     inkscape:cy="67.578125"
+     inkscape:zoom="0.38395763"
+     inkscape:cx="621.16229"
+     inkscape:cy="238.30754"
      inkscape:window-width="1482"
      inkscape:window-height="1091"
-     inkscape:window-x="314"
-     inkscape:window-y="138"
+     inkscape:window-x="427"
+     inkscape:window-y="162"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
-     units="px" />
+     width="400mm"
+     showguides="false" />
   <defs
      id="defs2" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-40.943476,-86.742977)">
-    <text
-       xml:space="preserve"
-       style="font-size:10.5833px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';stroke-width:0.264583"
-       x="47.547565"
-       y="84.069603"
-       id="text2607"><tspan
-         sodipodi:role="line"
-         id="tspan2605"
-         style="stroke-width:0.264583"
-         x="47.547565"
-         y="84.069603" /></text>
-    <g
-       aria-label="m"
-       id="text9591"
-       style="font-size:66.3708px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';fill:#ffffff;stroke-width:0.691361">
-      <path
-         d="m 90.208388,94.25056 c -5.641517,0 -10.420215,2.256607 -13.274159,5.907 -2.455719,-3.982247 -6.769821,-5.907 -11.946743,-5.907 -4.845068,0 -8.960058,1.725641 -11.61489,4.911439 v -4.513214 h -7.898124 v 35.442005 h 8.296349 V 112.1043 c 0,-7.0353 3.716765,-10.61932 9.225541,-10.61932 5.04418,0 7.964495,3.05305 7.964495,9.35828 v 19.24753 h 8.29635 V 112.1043 c 0,-7.0353 3.783135,-10.61932 9.225541,-10.61932 5.04418,0 7.964495,3.05305 7.964495,9.35828 v 19.24753 h 8.296347 v -20.30946 c 0,-10.685702 -5.973369,-15.53077 -14.535202,-15.53077 z"
-         id="path4427" />
-    </g>
-    <rect
-       id="rect10193"
-       width="58.833694"
-       height="8.2832842"
-       x="45.834965"
-       y="138.29439"
-       style="fill:#ffffff;stroke-width:1.30856" />
+     transform="translate(-22.395543,-41.260681)">
+    <path
+       style="fill:#3273dc;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 22.39559,56.066006 v 16.445155 l -10e-7,14.983363 c 0.159118,17.604866 -0.800844,17.247536 16.013736,17.254886 l 15.836951,0.007 7.895757,-24.191557 23.71909,-6.890951 -0.02632,-17.485839 C 85.879978,40.957976 85.441031,41.255749 70.203045,41.277567 l -16.322607,0.02337 -16.202188,0.0232 C 22.253026,41.056343 22.39559,40.950148 22.39559,56.066006 Z"
+       id="path20991"
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\path27753.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path1998-5"
+       style="fill:#00d1b2;fill-opacity:1;stroke:none;stroke-width:0.10935;stroke-linejoin:round;stroke-opacity:1"
+       d="m 65.756833,73.673603 h 20.104289 l -31.614847,31.082507 0.03867,-20.976787 c 0.245546,-10.514872 0.862873,-10.10572 11.471888,-10.10572 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:transform-center-y="5.01546"
+       inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\path27753.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linejoin:round"
+       id="path26715"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="-139.04285"
+       sodipodi:cy="-80.110779"
+       sodipodi:r1="44.924473"
+       sodipodi:r2="16.640167"
+       sodipodi:arg1="1.1484097"
+       sodipodi:arg2="1.7767282"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -120.62658,-39.134576 -21.81884,-24.687628 -29.87717,13.888683 16.73694,-28.37985 -22.44148,-24.123039 32.16284,7.147916 16.00758,-28.797546 3.14079,32.797509 32.334699,6.325181 -30.221719,13.122056 z"
+       transform="matrix(0.25118146,0,0,0.25118146,73.140496,96.356145)"
+       inkscape:transform-center-x="0.73424831"
+       inkscape:transform-center-y="0.5700733"
+       inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\path27753.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.192114;stroke-linejoin:round"
+       id="path27337"
+       cx="57.209824"
+       cy="53.895508"
+       rx="8.0056639"
+       ry="8.5060177"
+       inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\path27753.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linejoin:round"
+       id="path27753"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="66.005699"
+       sodipodi:cy="68.661278"
+       sodipodi:r1="39.45039"
+       sodipodi:r2="19.725195"
+       sodipodi:arg1="2.0211518"
+       sodipodi:arg2="3.0683494"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 48.833513,104.17817 43.833266,36.031285 105.35032,65.774384 Z"
+       transform="matrix(0.25908987,0,0,0.25908987,16.463874,37.066981)"
+       inkscape:transform-center-x="1.7408995"
+       inkscape:transform-center-y="-0.33702522"
+       inkscape:export-filename="C:\Users\Louis\Desktop\median\assets\path27753.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
