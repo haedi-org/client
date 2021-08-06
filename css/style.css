@@ -110,6 +110,7 @@ div.stdout span.edi-span {
 
 div.stdout table.edi-table {
     width: 100%;
+    cursor: pointer;
 }
 
 div#path-container {
