@@ -13,6 +13,10 @@ table {
     font-family: "Roboto Mono", monospace;
 }
 
+span {
+    cursor: default;
+}
+
 .wrapper {
     margin: 0;
     padding: 0;
@@ -133,10 +137,12 @@ div#path-container {
 }
 
 .edi-data {
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     cursor: pointer;
+    font-weight: normal;
 }
 
 .edi-data:hover {
     transition-duration: 0s;
+    font-weight: bold;
 }
