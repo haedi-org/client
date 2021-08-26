@@ -146,3 +146,7 @@ div#path-container {
     transition-duration: 0s;
     font-weight: bold;
 }
+
+.table.is-borderless td, .table.is-borderless th {
+    border: 0;
+}
