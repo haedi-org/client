@@ -1,0 +1,4 @@
+#3273DC Blue
+#00D1B2 Green
+#F197BB Pink
+#FFF562 Yellow
