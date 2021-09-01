@@ -13,7 +13,7 @@ Set the `paths.cli` value in `config.ini` to the top-level directory of [mejszin
 ```ini
 [paths]
 cli = ./../edi-cli/
-defaultmsg = ./../edi-samples/EDIFACT/DESADV_D01B_ecosio.edi
+msg = ./../edi-samples/EDIFACT/DESADV_D01B_ecosio.edi
 ```
 
 . . . and run!
