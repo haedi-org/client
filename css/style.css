@@ -150,3 +150,8 @@ div#path-container {
 .table.is-borderless td, .table.is-borderless th {
     border: 0;
 }
+
+.image.is-256x256 {
+    height: 256px;
+    width: 256px;
+}
