@@ -1,0 +1,17 @@
+.option-grid > div {
+    border: none;
+}
+
+.option-cell {
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    border: 1px solid lightgrey;
+    min-height: 128px;
+    cursor: pointer;
+    transition: border 0.2s linear;
+}
+
+.option-cell:hover {
+    border: 1px solid #3273DC;
+}
