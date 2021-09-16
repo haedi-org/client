@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="71.805649mm"
+   height="30.427084mm"
+   viewBox="0 0 71.805647 30.427084"
+   version="1.1"
+   id="svg901"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="haedi_text.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview903"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="17.75"
+     inkscape:cy="76.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs898">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect867"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-95.19779,-71.617127)">
+    <g
+       aria-label="glisten"
+       id="text2306"
+       style="font-size:25.4px;line-height:1.25;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates';fill:#2b2b2b;stroke-width:0.264583">
+      <g
+         aria-label="haedi"
+         id="text1584"
+         style="stroke-width:0.0700042">
+        <path
+           d="m 102.89399,82.375086 c -1.8796,0 -3.4798,0.6096 -4.5212,1.7272 v -6.857999 h -3.175 v 18.846799 h 3.175 v -6.858 c 0,-2.7178 1.524,-4.0894 3.7846,-4.0894 2.032,0 3.2258,1.1684 3.2258,3.5814 v 7.366 h 3.175 v -7.7724 c 0,-4.0894 -2.413,-5.9436 -5.6642,-5.9436 z"
+           id="path7646" />
+        <path
+           d="m 122.80755,82.527486 v 1.651 c -1.0922,-1.2192 -2.6162,-1.8034 -4.3434,-1.8034 -3.9624,0 -6.858,2.7178 -6.858,6.9342 0,4.2164 2.8956,6.9596 6.858,6.9596 1.8542,0 3.429,-0.635 4.4958,-1.9304 v 1.7526 h 3.0226 v -13.5636 z m -3.9878,11.0236 c -2.286,0 -4.0132,-1.651 -4.0132,-4.2418 0,-2.5908 1.7272,-4.2418 4.0132,-4.2418 2.3114,0 4.0386,1.651 4.0386,4.2418 0,2.5908 -1.7272,4.2418 -4.0386,4.2418 z"
+           id="path7648" />
+        <path
+           d="m 136.59973,93.576486 c -1.9812,0 -3.4544,-0.8382 -4.1148,-2.3876 l 10.3886,-2.032 c -0.0254,-4.2418 -3.0734,-6.7818 -6.858,-6.7818 -4.0386,0 -6.985,2.8956 -6.985,6.9342 0,4.0386 2.9464,6.9596 7.493,6.9596 2.3368,0 4.2418,-0.762 5.4356,-2.2098 l -1.6764,-1.9558 c -0.9906,0.9906 -2.159,1.4732 -3.683,1.4732 z m -0.5842,-8.6614 c 1.905,0 3.3274,1.1176 3.7592,2.7686 l -7.6708,1.4732 v -0.0254 c 0,-2.5908 1.6002,-4.2164 3.9116,-4.2164 z"
+           id="path7650" />
+        <path
+           d="m 156.03068,77.244287 v 6.959599 c -1.0668,-1.2446 -2.6162,-1.8288 -4.3688,-1.8288 -3.937,0 -6.858,2.7178 -6.858,6.9342 0,4.2164 2.921,6.9596 6.858,6.9596 1.8542,0 3.429,-0.635 4.4958,-1.9304 v 1.7526 h 3.048 V 77.244287 Z m -3.9878,16.306799 c -2.286,0 -4.0386,-1.651 -4.0386,-4.2418 0,-2.5908 1.7526,-4.2418 4.0386,-4.2418 2.286,0 4.0386,1.651 4.0386,4.2418 0,2.5908 -1.7526,4.2418 -4.0386,4.2418 z"
+           id="path7652" />
+        <path
+           d="m 164.97144,80.292287 c 1.1938,0 2.032,-0.8636 2.032,-1.9812 0,-1.0414 -0.8636,-1.8288 -2.032,-1.8288 -1.1684,0 -2.032,0.8382 -2.032,1.905 0,1.0668 0.8636,1.905 2.032,1.905 z m -1.6002,15.798799 h 3.175 v -13.5636 h -3.175 z"
+           id="path7654" />
+      </g>
+    </g>
+  </g>
+</svg>
