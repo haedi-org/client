@@ -83,6 +83,11 @@ img#logo {
     margin-left: 16px;
 }
 
+
+div#anim-logo {
+    margin-left: 16px;
+}
+
 div.stdout {
     display: flex;
     font-family: "Roboto Mono", monospace;
@@ -154,4 +159,15 @@ div#path-container {
 .image.is-256x256 {
     height: 256px;
     width: 256px;
+}
+
+.background-band {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 96px;
+    width: 100vw;
+    height: 250px;
+    background-color: whitesmoke;
 }
