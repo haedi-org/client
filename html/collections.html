@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="node_modules/bulma-timeline/dist/css/bulma-timeline.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
+    <script defer src="../lib/titlebar.js"></script>
+    <script defer src="../lib/string.js"></script>
+    <script defer src="../lib/browser.js"></script>
+    <script defer src="../lib/stdout.js"></script>
+    <script defer src="../lib/documentation.js"></script>
+</head>
+
+<body>
+    <div class="columns is-gapless wrapper">
+        <div class="column pr-0 py-0" style="max-width: 200px">
+            <div class="column-header">
+                <img id="logo" src="./assets/median.svg">
+            </div>
+            <aside class="menu is-small p-4">
+                <p class="menu-label">
+                    References
+                </p>
+                <ul class="menu-list">
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a>Third-party agencies</a></li>
+                    <li><a>Self defined</a></li>
+                </ul>
+                <p class="menu-label">
+                    Tools
+                </p>
+                <ul class="menu-list">
+                    <li><a href="index.html">Message inspect</a></li>
+                    <li><a>Configure pipelines</a></li>
+                    <li><a>Export as</a></li>
+                </ul>
+                <p class="menu-label">
+                    Settings
+                </p>
+                <ul class="menu-list">
+                    <li><a>Code tool settings</a></li>
+                    <li><a>Code tool permissions</a></li>
+                </ul>
+                <p class="menu-label">
+                    Help
+                </p>
+                <ul class="menu-list">
+                    <li><a>What is the code tool?</a></li>
+                    <li><a>Watch a tutorial video</a></li>
+                    <li><a onclick="openBrowser('https:\/\/machin.dev')">About mdev</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="column border p-0 m-0">
+            <div class="column-header">
+            </div>
+            <div id="waiting" class="block" style="display: none">
+                <div class="waiting">
+                    <progress class="progress is-link" max="100"></progress>
+                </div>
+            </div>
+            <div id="stdout" class="container">
+                <article class="is-info block">
+                    <!--<p class="panel-heading">
+                        Documentation
+                    </p>-->
+                    <p class="panel-tabs">
+                        <a id="allBtn" class="is-active">All</a>
+                        <a id="publicBtn">Public</a>
+                        <a id="privateBtn">Private</a>
+                    </p>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                            <input class="input is-info" type="text" placeholder="Search">
+                            <span class="icon is-left">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="column pl-0 py-0" style="max-width: 200px">
+            <div class="column-header">
+            </div>
+            <div class="block">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
