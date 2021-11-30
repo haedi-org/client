@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="xml_file.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="11.313709"
+     inkscape:cx="19.754796"
+     inkscape:cy="40.172504"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="64px" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1604"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.63499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.131013,0.9464274 5.6832812,1.9e-7 4.9895848,4.30426771 -0.01945,10.7170587 H 3.131013 V 0.9464274"
+       id="path1936" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.63499999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 8.8142942,0.94642759 13.803879,5.2506953 H 8.8192717 Z"
+       id="path2883" />
+    <g
+       id="rect3396">
+      <path
+         style="color:#000000;fill:#ffffff;stroke-width:0.635;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="M 1.9501234,6.7520199 H 14.971592 V 14.383856 H 1.9501234 Z"
+         id="path1407" />
+      <path
+         style="color:#000000;fill:#000000;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="M 1.9492187,6.4335937 A 0.31753175,0.31753175 0 0 0 1.6328125,6.7519531 v 7.6328129 a 0.31753175,0.31753175 0 0 0 0.3164062,0.316406 H 14.970703 a 0.31753175,0.31753175 0 0 0 0.31836,-0.316406 V 6.7519531 A 0.31753175,0.31753175 0 0 0 14.970703,6.4335937 Z M 2.2675781,7.0703125 H 14.654297 V 14.066406 H 2.2675781 Z"
+         id="path1409" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.87011px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';stroke-width:0.15219"
+       x="3.4800436"
+       y="12.306432"
+       id="text4567"><tspan
+         id="tspan4565"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.87011px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';stroke-width:0.15219"
+         x="3.4800436"
+         y="12.306432"
+         sodipodi:role="line">XML</tspan></text>
+  </g>
+</svg>

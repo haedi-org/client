@@ -36,7 +36,11 @@ span {
     border-right: 1px solid #E7EBED;
 }
 
-.column {
+.no-border {
+    border-style: none;
+}
+
+.column-top-border {
     border-top: 1px solid #E7EBED;
 }
 
@@ -169,4 +173,18 @@ div#path-container {
     width: 100vw;
     height: 250px;
     background-color: whitesmoke;
+}
+
+.round-icon-button {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    padding: 16px;
+    background-color: #F2F2F3;
+    display: flex;
+}
+
+.round-icon-button img {
+    width: 64px;
+    height: auto;
 }
