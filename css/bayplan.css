@@ -1,0 +1,26 @@
+table.bayplan td {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #DBDBDB;
+}
+
+table.bayplan .bay-no {
+    text-align: center;
+    border: none;
+}
+
+table.bayplan .axis {
+    font-size: 0.8em;
+    text-align: center;
+    border: none;
+}
+
+table.bayplan td.full {
+    /*background-color: lightgreen;*/
+    border: 1px double black;
+}
+
+table.bayplan td.empty {
+    background-color: lightslategray;
+    border: 1px double black;
+}
