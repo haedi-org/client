@@ -1,6 +1,7 @@
 table.bayplan td {
     width: 14px;
     height: 14px;
+    box-sizing: border-box;
     border: 1px solid #DBDBDB;
 }
 
@@ -16,11 +17,19 @@ table.bayplan .axis {
 }
 
 table.bayplan td.full {
-    /*background-color: lightgreen;*/
     border: 1px double black;
 }
 
 table.bayplan td.empty {
-    background-color: lightslategray;
+    /*background-image: url("../assets/icons/empty_stow.png");*/
     border: 1px double black;
+    padding: 2px;
+}
+
+table.bayplan td.empty:after {
+    content: "";
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 100%;
 }
