@@ -11,19 +11,17 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../css/scrollbar.css"/>
     <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/bayplan.css"/>
     <script src="../node_modules/p5/lib/p5.min.js"></script>
-    <script defer src="../lib/stdout.js"></script>
     <script defer src="../lib/string.js"></script>
-    <script defer src="../lib/edifact.js"></script>
     <script defer src="../lib/titlebar.js"></script>
     <script defer src="../lib/dragdrop.js"></script>
     <script defer src="../lib/browser.js"></script>
     <script defer src="../lib/modal.js"></script>
-    <script defer src="../lib/export.js"></script>
     <script defer src="../lib/sketches/sketches.js"></script>
     <script defer src="../lib/sketches/sparkle.js"></script>
     <script defer src="../lib/sketches/atom.js"></script>
+    <script src="../lib/markdown_render.js"></script>
+
 </head>
 
 <body>
@@ -61,7 +59,6 @@
                     Help
                 </p>
                 <ul class="menu-list">
-                    <li><a href="changelog.html">Changelog</a></li>
                     <li><a onclick="openBrowser('https:\\\\machin.dev')">About mdev</a></li>
                     <li><a onclick="aboutModal()">About haedi</a></li>
                     <li><a onclick="exampleModal()">Modal test</a></li>
@@ -70,47 +67,13 @@
             </aside>
         </div>
         <div class="column column-top-border border p-0 m-0">
-            <div class="column-header">
-            </div>
-            <div id="path-container" class="column-tabs">
-                <nav class="level" style="width: 100%">
-                    <div class="level-left" style="width: 80%">
-                        <div class="level-item" style="width: 100%">
-                            <div class="control has-icons-left" style="width: 100%">
-                                <input id="path-input" class="input" type="path" placeholder="C:\path\to\file">
-                                <span class="icon is-left">
-                                    <i class="fas fa-file"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-right" style="width: 20%">
-                        <div class="level-item">
-                            <button class="button is-small" onclick="set_edi_path()">Upload</button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="column-tabs">
-                <div class="tabs is-centered" style="width: 100%">
-                    <ul>
-                        <li id="infoBtn" class="is-active"><a>Info</a></li>
-                        <li id="diagnosticsBtn"><a>Diagnostics</a></li>
-                        <li id="timelineBtn"><a>Timeline</a></li>
-                        <li id="testBtn"><a>Integrity</a></li>
-                        <li id="debugBtn"><a>Debug</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="waiting" class="block" style="display: flex">
+            <div class="column-header"></div>
+            <!--<div id="waiting" class="block" style="display: flex">
                 <div class="waiting">
                     <div id="anim" style="padding-bottom: 32px"></div>
-                    <!--<progress class="progress is-link" max="100"></progress>-->
                 </div>
-            </div>
-            <div id="stdout" class="container stdout" style="display: none; min-width: 100%">
-                
-            </div>
+            </div>-->
+            <div id="markdown-content" class="content"></div>
         </div>
         <div class="column column-top-border pl-0 py-0" style="max-width: 32px">
             <div class="column-header">
@@ -119,6 +82,7 @@
             </div>
         </div>
     </div>
+    <script defer src="../lib/markdown_load.js"></script>
 </body>
 
 </html>
