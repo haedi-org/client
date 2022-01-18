@@ -21,7 +21,7 @@ table.bayplan td.full {
 }
 
 table.bayplan td.empty {
-    /*background-image: url("../assets/icons/empty_stow.png");*/
+    /*background-image: url("../data/assets/icons/empty_stow.png");*/
     border: 1px double black;
     padding: 2px;
 }
